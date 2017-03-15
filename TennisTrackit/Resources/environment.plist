@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   environment.plist
+   viper-boilerplate
+
+   Created by Annie on 03/03/2017.
+   Copyright (c) 2017 Dogfish. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>development</key>
+        <dict>
+        </dict>
+        <key>preproduction</key>
+        <dict>
+        </dict>
+        <key>production</key>
+        <dict>
+        </dict>
+        <key>rspa</key>
+        <dict>
+        </dict>
+    </dict>
+</plist>
