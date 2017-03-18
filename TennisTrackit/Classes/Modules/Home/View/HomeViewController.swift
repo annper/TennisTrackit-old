@@ -25,7 +25,7 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
     }
     
     override var lazyTableViewDelegate:TableViewDelegate<HomeListDisplayItem> {
-        let temp = TableViewDelegate<HomeListDisplayItem>()
+        let temp = HomeTableViewDelegate()
         
         temp.didSelectRowAtIndexPath = { [weak self] (indexPath, object) in
 			guard let strongSelf = self else { return }
@@ -35,6 +35,7 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
         
         return temp
     }
+
     
     // MARK: - TableViewController
     
@@ -68,4 +69,14 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
     
     // MARK: - HomeViewInput
 
+}
+
+class HomeTableViewDelegate: TableViewDelegate<HomeListDisplayItem> {
+    
+    private let rowHeight = (UIScreen.main.bounds.height - 64) / 3
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return rowHeight
+    }
+    
 }

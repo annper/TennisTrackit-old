@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navigationViewController = Appearance.initNavigationController()
         
-        navigationViewController.viewControllers = [WelcomeModule.build()]
+        navigationViewController.viewControllers = [HomeModule.build()]
         
         return navigationViewController
     }

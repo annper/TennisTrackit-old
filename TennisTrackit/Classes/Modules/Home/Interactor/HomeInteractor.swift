@@ -14,13 +14,15 @@ class HomeInteractor: HomeInteractorInput {
     
     func dataItems() -> [HomeListDataItem] {
         var items = [HomeListDataItem]()
+        var id = 0
         
-        for i in 0...15 {
-            let text = "Lorem Ipsum"
-            
-            let item = HomeListDataItem(id: i, text: text)
-            items.append(item)
-        }
+        items.append(HomeListDataItem(id: id, text: "Comin up..."))
+        
+        id += 1
+        items.append(HomeListDataItem(id: id, text: "My goals"))
+        
+        id += 1
+        items.append(HomeListDataItem(id: id, text: "View calendar"))
         
         return items
     }
