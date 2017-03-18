@@ -37,4 +37,8 @@ struct Font {
     static func boldFontWithSketchSize(size: CGFloat) -> UIFont {
         return UIFont(name: "HelveticaNeue-Bold", size: size)!
     }
+    
+    static func regularTennisFontWithSketchSize(size: CGFloat) -> UIFont {
+        return UIFont(name: "Rockin Record__G", size: size)!
+    }
 }

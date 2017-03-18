@@ -30,6 +30,8 @@
 		841461C41E798482007D5002 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461B11E798482007D5002 /* HomeWireframe.swift */; };
 		841461C51E798482007D5002 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461B11E798482007D5002 /* HomeWireframe.swift */; };
 		8431C6841E7D763600F47041 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6831E7D763600F47041 /* Color.swift */; };
+		8431C6861E7D86E100F47041 /* rockin_record_g.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8431C6851E7D86E100F47041 /* rockin_record_g.ttf */; };
+		8431C6871E7D86E100F47041 /* rockin_record_g.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8431C6851E7D86E100F47041 /* rockin_record_g.ttf */; };
 		84839C0E1E65D08A00751F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84839C0D1E65D08A00751F65 /* Assets.xcassets */; };
 		84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84839C0F1E65D08A00751F65 /* LaunchScreen.storyboard */; };
 		84839C1C1E65D08A00751F65 /* TennisTrackitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84839C1B1E65D08A00751F65 /* TennisTrackitTests.swift */; };
@@ -136,6 +138,7 @@
 		841461AF1E798482007D5002 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		841461B11E798482007D5002 /* HomeWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		8431C6831E7D763600F47041 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8431C6851E7D86E100F47041 /* rockin_record_g.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rockin_record_g.ttf; sourceTree = "<group>"; };
 		84839C031E65D08A00751F65 /* TennisTrackit [Development].app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TennisTrackit [Development].app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84839C0D1E65D08A00751F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84839C101E65D08A00751F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -437,6 +440,7 @@
 		84B377F51E69AE3000013603 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8431C6851E7D86E100F47041 /* rockin_record_g.ttf */,
 				84B377F61E69AE3000013603 /* environment.plist */,
 			);
 			path = Resources;
@@ -622,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848FFD571E76F30700F1BBF7 /* PagingLoadingView.xib in Resources */,
+				8431C6861E7D86E100F47041 /* rockin_record_g.ttf in Resources */,
 				848FFD471E76F30700F1BBF7 /* EmptyView.xib in Resources */,
 				841461C01E798482007D5002 /* HomeListTableViewCell.xib in Resources */,
 				84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */,
@@ -643,6 +648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8414617F1E797C8B007D5002 /* Info.plist in Resources */,
+				8431C6871E7D86E100F47041 /* rockin_record_g.ttf in Resources */,
 				848FFD581E76F30700F1BBF7 /* PagingLoadingView.xib in Resources */,
 				848FFD481E76F30700F1BBF7 /* EmptyView.xib in Resources */,
 				84839C2B1E65D19200751F65 /* LaunchScreen.storyboard in Resources */,
