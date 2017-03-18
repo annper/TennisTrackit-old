@@ -15,7 +15,7 @@ struct Appearance {
     static func initNavigationController() -> UINavigationController {
         
         let navigationController = UINavigationController()
-        let navigationFont = Font.mediumFontWithSketchSize(size: Font.size20)
+        let navigationFont = Font.regularTennisFontWithSketchSize(size: Font.size20)
         let navigationTitleColor = Color.navigationGreen()
         let navigationBackgroundColor = Color.navigationYellow()
         

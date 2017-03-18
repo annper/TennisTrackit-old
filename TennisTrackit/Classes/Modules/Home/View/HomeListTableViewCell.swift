@@ -20,7 +20,6 @@ class HomeListTableViewCell: UITableViewCell {
             titleLabel.shadowColor = UIColor.black
             titleLabel.shadowOffset.width = CGFloat(3)
             titleLabel.shadowOffset.height = CGFloat(2)
-
         }
     }
     
