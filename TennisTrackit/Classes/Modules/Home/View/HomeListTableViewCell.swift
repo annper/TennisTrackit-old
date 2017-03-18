@@ -23,6 +23,12 @@ class HomeListTableViewCell: UITableViewCell {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        selectionStyle = .none
+    }
+    
     func setupWith(display: HomeListDisplayItem) {
         containerView.backgroundColor = display.backgroundColor
         titleLabel.text = display.text

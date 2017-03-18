@@ -28,6 +28,24 @@ class HomePresenter: SectionItemPresenter<HomeListDisplayItem>, HomeViewOutput, 
         updateSectionItemUserInterface(userInterface: userInterface, reloadData: false)
     }
     
+    func rowTappedWith(display: HomeListDisplayItem) {
+        let id = display.id
+        switch id {
+        case 0:
+            wireframe.presentCalendarModule()
+        case 1:
+            wireframe.presentGoalsModule()
+        case 2:
+            wireframe.presentSkillsModule()
+        default:
+            break
+        }
+    }
+    
+    func openMenu() {
+        wireframe.presentMenuModule()
+    }
+    
     // MARK: - SectionItemPresenter
     
     override func displayDataItems() -> [HomeListDisplayItem]? {

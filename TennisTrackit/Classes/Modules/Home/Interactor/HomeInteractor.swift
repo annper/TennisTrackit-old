@@ -17,13 +17,13 @@ class HomeInteractor: HomeInteractorInput {
         var items = [HomeListDataItem]()
         var id = 0
         
-        items.append(HomeListDataItem(id: id, text: "Coming up...", backgroundColor: Color.homeYellow(), image: nil))
+        items.append(HomeListDataItem(id: id, text: "Calendar", backgroundColor: Color.homeYellow(), image: nil))
         
         id += 1
         items.append(HomeListDataItem(id: id, text: "My goals", backgroundColor: Color.homeOlive(), image: nil))
         
         id += 1
-        items.append(HomeListDataItem(id: id, text: "View calendar", backgroundColor: Color.homeDarkOlive(), image: nil))
+        items.append(HomeListDataItem(id: id, text: "My skills", backgroundColor: Color.homeDarkOlive(), image: nil))
         
         return items
     }

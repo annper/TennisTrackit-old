@@ -14,11 +14,20 @@ class HomeWireframe: Wireframe {
     
     // MARK: - HomeWireframe
     
-	/*
-	// Example code: how to create and present a module
-    func presentHelpModule() {
-        let helpModule = HelpModule.build()
-        presentViewInNavigationController(helpModule, animated: true)
+    func presentCalendarModule() {
+        print("present clandar")
     }
-	*/
+    
+    func presentGoalsModule() {
+        print("present goals")
+    }
+    
+    func presentSkillsModule() {
+        print("present skills")
+    }
+    
+    func presentMenuModule() {
+        print("present menu module")
+    }
+
 }

@@ -10,6 +10,8 @@
 
 protocol HomeViewOutput: class {
     func viewWillAppear(animated: Bool)
+    func rowTappedWith(display: HomeListDisplayItem)
+    func openMenu()
 }
 
 protocol HomeViewInput: class, SectionItemViewInput {

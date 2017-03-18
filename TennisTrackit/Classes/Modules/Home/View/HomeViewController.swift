@@ -15,7 +15,7 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
     override var lazyTableViewDataSource:TableViewDataSource<HomeListDisplayItem> {
         let reuseIdentifier = HomeListTableViewCell.reuseIdentifier()
         let temp = TableViewDataSource<HomeListDisplayItem>(reuseIdentifier: reuseIdentifier)
-        
+
         temp.setupCellWithObject = { (cell, object) -> Void in
             let cell = cell as! HomeListTableViewCell
             cell.setupWith(display: object)
@@ -29,8 +29,7 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
         
         temp.didSelectRowAtIndexPath = { [weak self] (indexPath, object) in
 			guard let strongSelf = self else { return }
-			// strongSelf.eventHandler.didBlah(..)
-            print("Selected row: \(indexPath.row) in section: \(indexPath.section)")
+            strongSelf.eventHandler.rowTappedWith(display: object)
         }
         
         return temp
@@ -55,7 +54,6 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
         
         tableView.isScrollEnabled = false
         tableView.alwaysBounceVertical = false
-        tableView.allowsSelection = false
         tableView.separatorStyle = .none
     }
     
@@ -64,7 +62,7 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
         setUpNavigationBarImage()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburger.png"), style: .plain, target: self
             , action: #selector(self.didTapMenuBarButton(button:)))
-        navigationItem.title = NSLocalizedString("Home", comment: "")
+        navigationItem.title = NSLocalizedString("Tennis TrackIt", comment: "")
 
     }
     
@@ -76,7 +74,7 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
     }
     
     @objc private func didTapMenuBarButton(button: UIBarButtonItem) {
-        print("preseed menu button")
+        eventHandler.openMenu()
     }
     
     // MARK: - HomeViewInput
