@@ -29,6 +29,7 @@
 		841461C31E798482007D5002 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461AF1E798482007D5002 /* HomeViewController.swift */; };
 		841461C41E798482007D5002 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461B11E798482007D5002 /* HomeWireframe.swift */; };
 		841461C51E798482007D5002 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461B11E798482007D5002 /* HomeWireframe.swift */; };
+		8431C6841E7D763600F47041 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6831E7D763600F47041 /* Color.swift */; };
 		84839C0E1E65D08A00751F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84839C0D1E65D08A00751F65 /* Assets.xcassets */; };
 		84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84839C0F1E65D08A00751F65 /* LaunchScreen.storyboard */; };
 		84839C1C1E65D08A00751F65 /* TennisTrackitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84839C1B1E65D08A00751F65 /* TennisTrackitTests.swift */; };
@@ -134,6 +135,7 @@
 		841461AE1E798482007D5002 /* HomeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeListTableViewCell.xib; sourceTree = "<group>"; };
 		841461AF1E798482007D5002 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		841461B11E798482007D5002 /* HomeWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		8431C6831E7D763600F47041 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		84839C031E65D08A00751F65 /* TennisTrackit [Development].app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TennisTrackit [Development].app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84839C0D1E65D08A00751F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84839C101E65D08A00751F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 				84B378041E69B27500013603 /* Font.swift */,
 				84B378051E69B27500013603 /* NSDate.swift */,
 				84B378061E69B27500013603 /* String.swift */,
+				8431C6831E7D763600F47041 /* Color.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -777,6 +780,7 @@
 				84B3780D1E69B27500013603 /* String.swift in Sources */,
 				848FFD4B1E76F30700F1BBF7 /* Wireframe.swift in Sources */,
 				841461B61E798482007D5002 /* HomeInteractor.swift in Sources */,
+				8431C6841E7D763600F47041 /* Color.swift in Sources */,
 				84C3345C1E7990F00088F561 /* NSRange.swift in Sources */,
 				848FFD511E76F30700F1BBF7 /* PagingPresenter.swift in Sources */,
 				841461BC1E798482007D5002 /* HomePresenter.swift in Sources */,

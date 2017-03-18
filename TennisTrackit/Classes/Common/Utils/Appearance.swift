@@ -15,17 +15,18 @@ struct Appearance {
     static func initNavigationController() -> UINavigationController {
         
         let navigationController = UINavigationController()
-        //let navigationFont = Font.regularFontWithSketchSize(Font.size20)
-        //let navigationColor = Color.homeRedColor()
+        let navigationFont = Font.mediumFontWithSketchSize(size: Font.size20)
+        let navigationTitleColor = Color.navigationGreen()
+        let navigationBackgroundColor = Color.navigationYellow()
         
-        //navigationController.navigationBar.titleTextAttributes = [ NSFontAttributeName: navigationFont, NSForegroundColorAttributeName: navigationColor]
-        //navigationController.navigationBar.tintColor = navigationColor
-        //navigationController.navigationBar.barTintColor = Color.whiteColor()
+        navigationController.navigationBar.titleTextAttributes = [ NSFontAttributeName: navigationFont, NSForegroundColorAttributeName: navigationTitleColor]
+        navigationController.navigationBar.tintColor = navigationTitleColor
+        navigationController.navigationBar.barTintColor = navigationBackgroundColor
         
         return navigationController
     }
     
     static func setup() {
-        //UIWindow.appearance().tintColor = Color.defaultTintColor()
+        UIWindow.appearance().tintColor = UIColor.white
     }
 }
