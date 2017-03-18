@@ -5,6 +5,7 @@
 //  Created by Annie on 27/01/2017.
 //  Copyright © 2017 Dogfish Mobile. All rights reserved.
 //
+import UIKit
 
 class MenuInteractor: MenuInteractorInput {
     
@@ -14,13 +15,28 @@ class MenuInteractor: MenuInteractorInput {
     
     func dataItems() -> [MenuListDataItem] {
         var items = [MenuListDataItem]()
+        var id = 0
         
-        for i in 0...15 {
-            let text = "Lorem Ipsum"
-            
-            let item = MenuListDataItem(id: i, text: text)
-            items.append(item)
-        }
+        items.append(MenuListDataItem(id: id, text: "Home", icon: UIImage(named: "") ))
+        
+        id += 1
+        items.append(MenuListDataItem(id: id, text: "Goals", icon: UIImage(named: "") ))
+        
+        id += 1
+        items.append(MenuListDataItem(id: id, text: "Skills", icon: UIImage(named: "") ))
+        
+        id += 1
+        items.append(MenuListDataItem(id: id, text: "Drills", icon: UIImage(named: "") ))
+        
+        id += 1
+        items.append(MenuListDataItem(id: id, text: "Journal", icon: UIImage(named: "") ))
+        
+        id += 1
+        items.append(MenuListDataItem(id: id, text: "Calendar", icon: UIImage(named: "") ))
+        
+        id += 1
+        items.append(MenuListDataItem(id: id, text: "About", icon: UIImage(named: "") ))
+        
         
         return items
     }

@@ -59,7 +59,7 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
     
     override func setupNavigationBar() {
         super.setupNavigationBar()
-        setUpNavigationBarImage()
+        setUpNavigationBarImageLeft()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburger.png"), style: .plain, target: self
             , action: #selector(self.didTapMenuBarButton(button:)))
         navigationItem.title = NSLocalizedString("Tennis TrackIt", comment: "")

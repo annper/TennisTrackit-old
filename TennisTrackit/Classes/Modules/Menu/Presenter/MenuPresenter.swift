@@ -33,7 +33,7 @@ class MenuPresenter: SectionItemPresenter<MenuListDisplayItem>, MenuViewOutput, 
     override func displayDataItems() -> [MenuListDisplayItem]? {
         let dataItems = interactor.dataItems()
         
-        return dataItems.map { MenuListDisplayItem(id: $0.id, text: $0.text) }
+        return dataItems.map { MenuListDisplayItem(id: $0.id, text: $0.text, icon: $0.icon) }
     }
 
 }

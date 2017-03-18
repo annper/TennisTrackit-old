@@ -54,9 +54,7 @@ class MenuViewController: TableViewController<MenuListDisplayItem>, MenuViewInpu
     }
     
     override func setupNavigationBar() {
-        super.setupNavigationBar()
-        
-        navigationItem.title = NSLocalizedString("Menu", comment: "")
+        setUpNavigationBarImageRight()
     }
     
     // MARK: - UIViewController
