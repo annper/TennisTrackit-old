@@ -8,20 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2CC5DA228EC3EFC57197F957 /* Pods_TennisTrackit__Enterprise_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC91EAB0A87E95AFD7836887 /* Pods_TennisTrackit__Enterprise_.framework */; };
-		841460D41E784C1A007D5002 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460CA1E784C1A007D5002 /* WelcomeInteractor.swift */; };
-		841460D51E784C1A007D5002 /* WelcomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460CA1E784C1A007D5002 /* WelcomeInteractor.swift */; };
-		841460D61E784C1A007D5002 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460CC1E784C1A007D5002 /* WelcomePresenter.swift */; };
-		841460D71E784C1A007D5002 /* WelcomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460CC1E784C1A007D5002 /* WelcomePresenter.swift */; };
-		841460D81E784C1A007D5002 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841460CE1E784C1A007D5002 /* WelcomeView.xib */; };
-		841460D91E784C1A007D5002 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841460CE1E784C1A007D5002 /* WelcomeView.xib */; };
-		841460DA1E784C1A007D5002 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460CF1E784C1A007D5002 /* WelcomeViewController.swift */; };
-		841460DB1E784C1A007D5002 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460CF1E784C1A007D5002 /* WelcomeViewController.swift */; };
-		841460DC1E784C1A007D5002 /* WelcomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460D01E784C1A007D5002 /* WelcomeInterfaces.swift */; };
-		841460DD1E784C1A007D5002 /* WelcomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460D01E784C1A007D5002 /* WelcomeInterfaces.swift */; };
-		841460DE1E784C1A007D5002 /* WelcomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460D11E784C1A007D5002 /* WelcomeModule.swift */; };
-		841460DF1E784C1A007D5002 /* WelcomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460D11E784C1A007D5002 /* WelcomeModule.swift */; };
-		841460E01E784C1A007D5002 /* WelcomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460D31E784C1A007D5002 /* WelcomeWireframe.swift */; };
-		841460E11E784C1A007D5002 /* WelcomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841460D31E784C1A007D5002 /* WelcomeWireframe.swift */; };
 		8414617F1E797C8B007D5002 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84839C121E65D08A00751F65 /* Info.plist */; };
 		841461B21E798482007D5002 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461A41E798482007D5002 /* HomeInterfaces.swift */; };
 		841461B31E798482007D5002 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461A41E798482007D5002 /* HomeInterfaces.swift */; };
@@ -138,13 +124,6 @@
 /* Begin PBXFileReference section */
 		7F87AAEE2EB7D8E056847C19 /* Pods-TennisTrackit [Development].release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisTrackit [Development].release.xcconfig"; path = "Pods/Target Support Files/Pods-TennisTrackit [Development]/Pods-TennisTrackit [Development].release.xcconfig"; sourceTree = "<group>"; };
 		828CECB763F9D9A0CE20356F /* Pods-TennisTrackit [Development].debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisTrackit [Development].debug.xcconfig"; path = "Pods/Target Support Files/Pods-TennisTrackit [Development]/Pods-TennisTrackit [Development].debug.xcconfig"; sourceTree = "<group>"; };
-		841460CA1E784C1A007D5002 /* WelcomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeInteractor.swift; sourceTree = "<group>"; };
-		841460CC1E784C1A007D5002 /* WelcomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePresenter.swift; sourceTree = "<group>"; };
-		841460CE1E784C1A007D5002 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
-		841460CF1E784C1A007D5002 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		841460D01E784C1A007D5002 /* WelcomeInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeInterfaces.swift; sourceTree = "<group>"; };
-		841460D11E784C1A007D5002 /* WelcomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeModule.swift; sourceTree = "<group>"; };
-		841460D31E784C1A007D5002 /* WelcomeWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeWireframe.swift; sourceTree = "<group>"; };
 		841461A41E798482007D5002 /* HomeInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
 		841461A51E798482007D5002 /* HomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		841461A71E798482007D5002 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -251,52 +230,6 @@
 				FDEA6CFA2AC16DF58C81A3ED /* Pods-TennisTrackit [Enterprise].release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		841460C81E784C1A007D5002 /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				841460C91E784C1A007D5002 /* Interactor */,
-				841460CB1E784C1A007D5002 /* Presenter */,
-				841460CD1E784C1A007D5002 /* View */,
-				841460D01E784C1A007D5002 /* WelcomeInterfaces.swift */,
-				841460D11E784C1A007D5002 /* WelcomeModule.swift */,
-				841460D21E784C1A007D5002 /* Wireframe */,
-			);
-			path = Welcome;
-			sourceTree = "<group>";
-		};
-		841460C91E784C1A007D5002 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				841460CA1E784C1A007D5002 /* WelcomeInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		841460CB1E784C1A007D5002 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				841460CC1E784C1A007D5002 /* WelcomePresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		841460CD1E784C1A007D5002 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				841460CE1E784C1A007D5002 /* WelcomeView.xib */,
-				841460CF1E784C1A007D5002 /* WelcomeViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		841460D21E784C1A007D5002 /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-				841460D31E784C1A007D5002 /* WelcomeWireframe.swift */,
-			);
-			path = Wireframe;
 			sourceTree = "<group>";
 		};
 		841461A31E798482007D5002 /* Home */ = {
@@ -532,7 +465,6 @@
 			isa = PBXGroup;
 			children = (
 				841461A31E798482007D5002 /* Home */,
-				841460C81E784C1A007D5002 /* Welcome */,
 				848FFD241E76F30700F1BBF7 /* Common */,
 			);
 			path = Modules;
@@ -690,7 +622,6 @@
 				848FFD471E76F30700F1BBF7 /* EmptyView.xib in Resources */,
 				841461C01E798482007D5002 /* HomeListTableViewCell.xib in Resources */,
 				84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */,
-				841460D81E784C1A007D5002 /* WelcomeView.xib in Resources */,
 				84839C0E1E65D08A00751F65 /* Assets.xcassets in Resources */,
 				848FFD5B1E76F30700F1BBF7 /* PagingStaleDataView.xib in Resources */,
 				84B377F71E69AE3000013603 /* environment.plist in Resources */,
@@ -712,7 +643,6 @@
 				848FFD581E76F30700F1BBF7 /* PagingLoadingView.xib in Resources */,
 				848FFD481E76F30700F1BBF7 /* EmptyView.xib in Resources */,
 				84839C2B1E65D19200751F65 /* LaunchScreen.storyboard in Resources */,
-				841460D91E784C1A007D5002 /* WelcomeView.xib in Resources */,
 				84839C2C1E65D19200751F65 /* Assets.xcassets in Resources */,
 				848FFD5C1E76F30700F1BBF7 /* PagingStaleDataView.xib in Resources */,
 				841461C11E798482007D5002 /* HomeListTableViewCell.xib in Resources */,
@@ -827,10 +757,7 @@
 				84B378151E69B5AF00013603 /* NSIndexPath.swift in Sources */,
 				84C334591E79905F0088F561 /* Array.swift in Sources */,
 				84C334561E7980DD0088F561 /* Paginator.swift in Sources */,
-				841460D41E784C1A007D5002 /* WelcomeInteractor.swift in Sources */,
 				848FFD531E76F30700F1BBF7 /* PagingCollectionViewController.swift in Sources */,
-				841460DA1E784C1A007D5002 /* WelcomeViewController.swift in Sources */,
-				841460DC1E784C1A007D5002 /* WelcomeInterfaces.swift in Sources */,
 				848FFD631E76F30700F1BBF7 /* SectionItemInterfaces.swift in Sources */,
 				848FFD5F1E76F30700F1BBF7 /* SectionItemDisplayDataCollection.swift in Sources */,
 				84B377FD1E69AEE700013603 /* AppDelegate.swift in Sources */,
@@ -838,10 +765,8 @@
 				848FFD6F1E76F30700F1BBF7 /* TableViewDelegate.swift in Sources */,
 				848FFD5D1E76F30700F1BBF7 /* PagingTableViewController.swift in Sources */,
 				848FFD451E76F30700F1BBF7 /* EmptyView.swift in Sources */,
-				841460D61E784C1A007D5002 /* WelcomePresenter.swift in Sources */,
 				841461C21E798482007D5002 /* HomeViewController.swift in Sources */,
 				84B378071E69B27500013603 /* Appearance.swift in Sources */,
-				841460E01E784C1A007D5002 /* WelcomeWireframe.swift in Sources */,
 				84B378171E69B5AF00013603 /* NSObject.swift in Sources */,
 				848FFD691E76F30700F1BBF7 /* CollectionViewDelegate.swift in Sources */,
 				848FFD6B1E76F30700F1BBF7 /* TableViewController.swift in Sources */,
@@ -852,7 +777,6 @@
 				84B3780D1E69B27500013603 /* String.swift in Sources */,
 				848FFD4B1E76F30700F1BBF7 /* Wireframe.swift in Sources */,
 				841461B61E798482007D5002 /* HomeInteractor.swift in Sources */,
-				841460DE1E784C1A007D5002 /* WelcomeModule.swift in Sources */,
 				84C3345C1E7990F00088F561 /* NSRange.swift in Sources */,
 				848FFD511E76F30700F1BBF7 /* PagingPresenter.swift in Sources */,
 				841461BC1E798482007D5002 /* HomePresenter.swift in Sources */,
@@ -890,10 +814,7 @@
 				84B378161E69B5AF00013603 /* NSIndexPath.swift in Sources */,
 				84C3345A1E79905F0088F561 /* Array.swift in Sources */,
 				84C334571E7980DD0088F561 /* Paginator.swift in Sources */,
-				841460D51E784C1A007D5002 /* WelcomeInteractor.swift in Sources */,
 				848FFD541E76F30700F1BBF7 /* PagingCollectionViewController.swift in Sources */,
-				841460DB1E784C1A007D5002 /* WelcomeViewController.swift in Sources */,
-				841460DD1E784C1A007D5002 /* WelcomeInterfaces.swift in Sources */,
 				848FFD641E76F30700F1BBF7 /* SectionItemInterfaces.swift in Sources */,
 				848FFD601E76F30700F1BBF7 /* SectionItemDisplayDataCollection.swift in Sources */,
 				84B377FE1E69AEE700013603 /* AppDelegate.swift in Sources */,
@@ -901,10 +822,8 @@
 				848FFD701E76F30700F1BBF7 /* TableViewDelegate.swift in Sources */,
 				848FFD5E1E76F30700F1BBF7 /* PagingTableViewController.swift in Sources */,
 				848FFD461E76F30700F1BBF7 /* EmptyView.swift in Sources */,
-				841460D71E784C1A007D5002 /* WelcomePresenter.swift in Sources */,
 				841461C31E798482007D5002 /* HomeViewController.swift in Sources */,
 				84B378081E69B27500013603 /* Appearance.swift in Sources */,
-				841460E11E784C1A007D5002 /* WelcomeWireframe.swift in Sources */,
 				84B378181E69B5AF00013603 /* NSObject.swift in Sources */,
 				848FFD6A1E76F30700F1BBF7 /* CollectionViewDelegate.swift in Sources */,
 				848FFD6C1E76F30700F1BBF7 /* TableViewController.swift in Sources */,
@@ -915,7 +834,6 @@
 				84B3780E1E69B27500013603 /* String.swift in Sources */,
 				848FFD4C1E76F30700F1BBF7 /* Wireframe.swift in Sources */,
 				841461B71E798482007D5002 /* HomeInteractor.swift in Sources */,
-				841460DF1E784C1A007D5002 /* WelcomeModule.swift in Sources */,
 				84C3345D1E7990F00088F561 /* NSRange.swift in Sources */,
 				848FFD521E76F30700F1BBF7 /* PagingPresenter.swift in Sources */,
 				841461BD1E798482007D5002 /* HomePresenter.swift in Sources */,
