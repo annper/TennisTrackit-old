@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-//import Cartography
+import Cartography
 
 extension UIViewController {
 
@@ -20,12 +20,12 @@ extension UIViewController {
         self.addChildViewController(childViewController)
         view.addSubview(childViewController.view)
         
-//        constrain(childViewController.view, view) { childViewControllerView, view in
-//            childViewControllerView.leading == view.leading
-//            childViewControllerView.trailing == view.trailing
-//            childViewControllerView.top == view.top + topInset
-//            childViewControllerView.bottom == view.bottom
-//        }
+        constrain(childViewController.view, view) { childViewControllerView, view in
+            childViewControllerView.leading == view.leading
+            childViewControllerView.trailing == view.trailing
+            childViewControllerView.top == view.top + topInset
+            childViewControllerView.bottom == view.bottom
+        }
         
         childViewController.didMove(toParentViewController: self)
     }
