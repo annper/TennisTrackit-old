@@ -33,7 +33,7 @@ class HomePresenter: SectionItemPresenter<HomeListDisplayItem>, HomeViewOutput, 
     override func displayDataItems() -> [HomeListDisplayItem]? {
         let dataItems = interactor.dataItems()
         
-        return dataItems.map { HomeListDisplayItem(id: $0.id, text: $0.text) }
+        return dataItems.map { HomeListDisplayItem(id: $0.id, text: $0.text, backgroundColor: $0.backgroundColor, image: $0.image) }
     }
 
 }

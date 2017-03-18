@@ -5,6 +5,7 @@
 //  Created by Annie on 27/01/2017.
 //  Copyright © 2017. All rights reserved.
 //
+import UIKit
 
 class HomeInteractor: HomeInteractorInput {
     
@@ -16,13 +17,13 @@ class HomeInteractor: HomeInteractorInput {
         var items = [HomeListDataItem]()
         var id = 0
         
-        items.append(HomeListDataItem(id: id, text: "Comin up..."))
+        items.append(HomeListDataItem(id: id, text: "Coming up...", backgroundColor: Color.homeYellow(), image: nil))
         
         id += 1
-        items.append(HomeListDataItem(id: id, text: "My goals"))
+        items.append(HomeListDataItem(id: id, text: "My goals", backgroundColor: Color.homeOlive(), image: nil))
         
         id += 1
-        items.append(HomeListDataItem(id: id, text: "View calendar"))
+        items.append(HomeListDataItem(id: id, text: "View calendar", backgroundColor: Color.homeDarkOlive(), image: nil))
         
         return items
     }

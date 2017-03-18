@@ -18,7 +18,7 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
         
         temp.setupCellWithObject = { (cell, object) -> Void in
             let cell = cell as! HomeListTableViewCell
-            cell.textLabel!.text = object.text
+            cell.setupWith(display: object)
         }
         
         return temp
@@ -52,6 +52,11 @@ class HomeViewController: TableViewController<HomeListDisplayItem>, HomeViewInpu
         
         // configure table view
         tableView.register(HomeListTableViewCell.nib(), forCellReuseIdentifier: HomeListTableViewCell.reuseIdentifier())
+        
+        tableView.isScrollEnabled = false
+        tableView.alwaysBounceVertical = false
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
     }
     
     override func setupNavigationBar() {
