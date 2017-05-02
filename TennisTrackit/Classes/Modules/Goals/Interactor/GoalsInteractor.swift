@@ -25,7 +25,7 @@ class GoalsInteractor: GoalsInteractorInput {
         
         for goal in goals {
             id += 1
-            items.append(GoalsListDataItem(id: id, title: goal["title"] as! String))
+            items.append(GoalsListDataItem(id: id, title: goal["title"] as! String, description: goal["description"] as? String))
         }
         
         return items

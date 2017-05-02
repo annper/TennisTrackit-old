@@ -52,6 +52,8 @@
 		841C0BEB1EB9310D00902D10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BEA1EB9310D00902D10 /* Constants.swift */; };
 		841C0BEC1EB9310D00902D10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BEA1EB9310D00902D10 /* Constants.swift */; };
 		841C0BEF1EB9363800902D10 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6831E7D763600F47041 /* Color.swift */; };
+		841C0BF11EB948B300902D10 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BF01EB948B300902D10 /* UIApplication.swift */; };
+		841C0BF21EB948B300902D10 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BF01EB948B300902D10 /* UIApplication.swift */; };
 		8431C6841E7D763600F47041 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6831E7D763600F47041 /* Color.swift */; };
 		8431C6861E7D86E100F47041 /* rockin_record_g.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8431C6851E7D86E100F47041 /* rockin_record_g.ttf */; };
 		8431C6871E7D86E100F47041 /* rockin_record_g.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8431C6851E7D86E100F47041 /* rockin_record_g.ttf */; };
@@ -191,6 +193,7 @@
 		841C0BD31EB92DB700902D10 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		841C0BD51EB92DB700902D10 /* GoalsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsWireframe.swift; sourceTree = "<group>"; };
 		841C0BEA1EB9310D00902D10 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		841C0BF01EB948B300902D10 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		8431C6831E7D763600F47041 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8431C6851E7D86E100F47041 /* rockin_record_g.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rockin_record_g.ttf; sourceTree = "<group>"; };
 		8431C68A1E7DA70100F47041 /* MenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
@@ -651,6 +654,7 @@
 				84B378121E69B5AF00013603 /* UITableView.swift */,
 				84B378131E69B5AF00013603 /* UIView.swift */,
 				84B378141E69B5AF00013603 /* UIViewController.swift */,
+				841C0BF01EB948B300902D10 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -964,6 +968,7 @@
 				841461BE1E798482007D5002 /* HomeListTableViewCell.swift in Sources */,
 				841461BA1E798482007D5002 /* HomeListDisplayItem.swift in Sources */,
 				84B3780D1E69B27500013603 /* String.swift in Sources */,
+				841C0BF11EB948B300902D10 /* UIApplication.swift in Sources */,
 				8431C6A71E7DA70100F47041 /* MenuViewController.swift in Sources */,
 				8431C69F1E7DA70100F47041 /* MenuListDisplayItem.swift in Sources */,
 				848FFD4B1E76F30700F1BBF7 /* Wireframe.swift in Sources */,
@@ -1041,6 +1046,7 @@
 				841461BB1E798482007D5002 /* HomeListDisplayItem.swift in Sources */,
 				84B3780E1E69B27500013603 /* String.swift in Sources */,
 				841C0BE31EB92DB700902D10 /* GoalsListTableViewCell.swift in Sources */,
+				841C0BF21EB948B300902D10 /* UIApplication.swift in Sources */,
 				8431C69E1E7DA70100F47041 /* MenuModule.swift in Sources */,
 				848FFD4C1E76F30700F1BBF7 /* Wireframe.swift in Sources */,
 				841461B71E798482007D5002 /* HomeInteractor.swift in Sources */,

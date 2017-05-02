@@ -18,7 +18,9 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         
         temp.setupCellWithObject = { (cell, object) -> Void in
             let cell = cell as! GoalsListTableViewCell
-            cell.textLabel!.text = object.text
+            cell.setupWith(display: object)
+//            cell.textLabel!.text = object.title
+            
         }
         
         return temp

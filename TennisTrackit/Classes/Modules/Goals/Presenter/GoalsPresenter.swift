@@ -37,7 +37,7 @@ class GoalsPresenter: SectionItemPresenter<GoalsListDisplayItem>, GoalsViewOutpu
     override func displayDataItems() -> [GoalsListDisplayItem]? {
         let dataItems = interactor.dataItems()
         
-        return dataItems.map { GoalsListDisplayItem(id: $0.id, text: $0.title) }
+        return dataItems.map { GoalsListDisplayItem(id: $0.id, title: $0.title, description: $0.description) }
     }
 
 }
