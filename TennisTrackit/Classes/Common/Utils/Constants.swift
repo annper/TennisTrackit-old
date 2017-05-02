@@ -71,11 +71,11 @@ public class Constants {
         self.environment = environment
     }
     
-    public var UserGoals: [Any]? {
+    public var UserGoals: [[String: Any]]? {
         get {
             let defaults = UserDefaults.standard
             
-            if let goals = defaults.value(forKey: "goals") as? [Any] {
+            if let goals = defaults.value(forKey: "goals") as? [[String: Any]] {
                 return goals
             }
             

@@ -11,10 +11,10 @@ import UIKit
 struct GoalsListDataItem {
 	
     var id: Int
-    var text: String
+    var title: String
     
-    init(id: Int, text: String) {
+    init(id: Int, title: String) {
         self.id = id
-        self.text = text
+        self.title = title
     }
 }
