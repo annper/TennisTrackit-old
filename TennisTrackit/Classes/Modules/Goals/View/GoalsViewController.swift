@@ -16,7 +16,7 @@ class GoalsViewController: ViewController, GoalsViewInput {
     // MARK: - ViewController
 
     override func setupNavigationBar() {
-        super.setupNavigationBar()
+//        super.setupNavigationBar()
         navigationItem.title = NSLocalizedString("Goals", comment: "")
     }
     

@@ -14,6 +14,15 @@ class MenuWireframe: Wireframe {
     
     // MARK: - MenuWireframe
     
+    func showHomeModule() {
+         _ = viewController.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func showGoalsModule() {
+        let goalsViewController = GoalsModule.build()
+        pushViewInNavigationController(viewController: goalsViewController, animated: true)
+    }
+    
 	/*
 	// Example code: how to create and present a module
     func presentHelpModule() {
