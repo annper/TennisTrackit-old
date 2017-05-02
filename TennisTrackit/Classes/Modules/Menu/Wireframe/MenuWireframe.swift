@@ -19,18 +19,24 @@ class MenuWireframe: Wireframe {
     }
     
     func showGoalsModule() {
-        if let viewControllers = viewController.navigationController?.viewControllers {
-            if viewControllers.count >= 2 {
-                let previousViewController = viewControllers[viewControllers.count - 2]
-                if previousViewController.isKind(of: GoalsViewController.self) {
-                   _ = viewController.navigationController?.popViewController(animated: true)
-                    return
-                }
-            }
+        
+        if (previousViewController()?.isKind(of: GoalsViewController.self))! {
+            _ = viewController.navigationController?.popViewController(animated: true)
+            return
         }
 
         let goalsViewController = GoalsModule.build()
         pushViewInNavigationController(viewController: goalsViewController, animated: true)
 
+    }
+    
+    private func previousViewController() -> UIViewController? {
+        if let viewControllers = viewController.navigationController?.viewControllers {
+            if viewControllers.count >= 2 {
+                return viewControllers[viewControllers.count - 2]
+            }
+        }
+        
+        return nil
     }
 }
