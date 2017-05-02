@@ -20,7 +20,7 @@ class SectionItemPresenter<T: SectionItem> {
         let sectionItemDisplayDataCollection = SectionItemDisplayDataCollection()
         
         if let items = displayDataItems {
-            sectionItemDisplayDataCollection.addItems(items: items.map { $0 as T }, section: 0)
+            _ = sectionItemDisplayDataCollection.addItems(items: items.map { $0 as T }, section: 0)
             
             return sectionItemDisplayDataCollection
         }

@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navigationViewController = Appearance.initNavigationController()
         
-        navigationViewController.viewControllers = [WelcomeModule.build()]
+        navigationViewController.viewControllers = [HomeModule.build()]
         
         return navigationViewController
     }
@@ -28,12 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Appearance.setup()
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        window!.backgroundColor = UIColor.white
         
         window?.rootViewController = rootViewController()
         window!.makeKeyAndVisible()
-
-        
-        window?.makeKeyAndVisible();
         
         return true
     }

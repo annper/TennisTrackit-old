@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-//import Cartography
+import Cartography
 
 extension UIView {
     
@@ -49,10 +49,10 @@ extension UIView {
     func addView(view: UIView) {
         addSubview(view)
         
-//        constrain(view, self) { childView, view in
-//            childView.size == view.size
-//            childView.center == view.center
-//        }
+        constrain(view, self) { childView, view in
+            childView.size == view.size
+            childView.center == view.center
+        }
     }
     
     func pulseWithDuration(duration: Double) {

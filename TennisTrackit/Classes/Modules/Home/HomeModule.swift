@@ -1,25 +1,27 @@
 //
-//  WelcomeModuleBuilder.swift
+//  HomeModuleBuilder.swift
 //  Generated using vipergen
 //
-//  Copyright © 2015. All rights reserved.
+//  Created by Annie on 27/01/2017.
+//  Copyright © 2017. All rights reserved.
 //
 
 import UIKit
+//import AppCommon
 
-struct WelcomeModule {
-	
+struct HomeModule {
+
 	static func build() -> UIViewController {
         let module = buildModule()
 
         return module.viewController
 	}
     
-    private static func buildModule() -> (viewController: UIViewController, presenter: WelcomePresenter) {
-        let viewController = WelcomeViewController(nibName: "WelcomeView", bundle: nil)
-        let wireframe = WelcomeWireframe()
-        let interactor = WelcomeInteractor()
-		let presenter = WelcomePresenter(wireframe: wireframe, interactor: interactor, userInterface: viewController)
+    private static func buildModule() -> (viewController: HomeViewController, presenter: HomePresenter) {
+        let viewController = HomeViewController(nibName: nil, bundle: nil)
+        let wireframe = HomeWireframe()
+        let interactor = HomeInteractor()
+		let presenter = HomePresenter(wireframe: wireframe, interactor: interactor, userInterface: viewController)
         
         wireframe.presenter = presenter
         wireframe.viewController = viewController
@@ -31,7 +33,7 @@ struct WelcomeModule {
         interactor.presenter = presenter
         
         viewController.eventHandler = presenter
-		
+        
 		return (viewController: viewController, presenter: presenter)
     }
     

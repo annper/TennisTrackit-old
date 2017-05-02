@@ -123,9 +123,10 @@ class PagingTableViewController<T: SectionItem> : TableViewController<T>, Paging
     }
     
     func showErrorForFailedToLoadPage(page: Int) {
-        UIAlertView(title: NSLocalizedString("Error", comment: ""),
-                    message: NSLocalizedString("Failed to load page \(page)", comment: ""),
-                    delegate: nil, cancelButtonTitle: NSLocalizedString("Ok", comment: "")).show()
+        let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Failed to load page \(page)", comment: ""), preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
+        self.present(alertController, animated: false, completion: nil)
     }
     
     func endRefreshing() {

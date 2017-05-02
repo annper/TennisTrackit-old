@@ -138,10 +138,10 @@ class PagingCollectionViewController<T: SectionItem> : CollectionViewController<
     }
     
     func showErrorForFailedToLoadPage(page: Int) {
+        let alertController = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("Failed to load page \(page)", comment: ""), preferredStyle: .alert)
         
-        UIAlertView(title: NSLocalizedString("Error", comment: ""),
-            message: NSLocalizedString("Failed to load page \(page)", comment: ""),
-            delegate: nil, cancelButtonTitle: NSLocalizedString("Ok", comment: "")).show()
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Ok", comment: ""), style: .cancel, handler: nil))
+        self.present(alertController, animated: false, completion: nil)
     }
     
     func endRefreshing() {
