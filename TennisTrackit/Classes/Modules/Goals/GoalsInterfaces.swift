@@ -10,6 +10,7 @@
 
 protocol GoalsViewOutput: class {
     func viewWillAppear(animated: Bool)
+    func openMenu()
 }
 
 protocol GoalsViewInput: class, SectionItemViewInput {

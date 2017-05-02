@@ -57,6 +57,8 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         super.setupNavigationBar()
         
         navigationItem.title = NSLocalizedString("Goals", comment: "")
+        setUpNavigationBarImageLeft()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburger.png"), style: .plain, target: self, action: #selector(self.didTapMenuBarButton(button:)))
     }
     
     // MARK: - UIViewController
@@ -64,6 +66,10 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         eventHandler.viewWillAppear(animated: animated)
+    }
+    
+    @objc private func didTapMenuBarButton(button: UIBarButtonItem) {
+        eventHandler.openMenu()
     }
     
     // MARK: - GoalsViewInput
