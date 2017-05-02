@@ -49,6 +49,9 @@
 		841C0BE71EB92DB700902D10 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD31EB92DB700902D10 /* GoalsViewController.swift */; };
 		841C0BE81EB92DB700902D10 /* GoalsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD51EB92DB700902D10 /* GoalsWireframe.swift */; };
 		841C0BE91EB92DB700902D10 /* GoalsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD51EB92DB700902D10 /* GoalsWireframe.swift */; };
+		841C0BEB1EB9310D00902D10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BEA1EB9310D00902D10 /* Constants.swift */; };
+		841C0BEC1EB9310D00902D10 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BEA1EB9310D00902D10 /* Constants.swift */; };
+		841C0BEF1EB9363800902D10 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6831E7D763600F47041 /* Color.swift */; };
 		8431C6841E7D763600F47041 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6831E7D763600F47041 /* Color.swift */; };
 		8431C6861E7D86E100F47041 /* rockin_record_g.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8431C6851E7D86E100F47041 /* rockin_record_g.ttf */; };
 		8431C6871E7D86E100F47041 /* rockin_record_g.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8431C6851E7D86E100F47041 /* rockin_record_g.ttf */; };
@@ -187,6 +190,7 @@
 		841C0BD21EB92DB700902D10 /* GoalsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalsListTableViewCell.xib; sourceTree = "<group>"; };
 		841C0BD31EB92DB700902D10 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		841C0BD51EB92DB700902D10 /* GoalsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsWireframe.swift; sourceTree = "<group>"; };
+		841C0BEA1EB9310D00902D10 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8431C6831E7D763600F47041 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8431C6851E7D86E100F47041 /* rockin_record_g.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rockin_record_g.ttf; sourceTree = "<group>"; };
 		8431C68A1E7DA70100F47041 /* MenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
@@ -660,6 +664,7 @@
 				84B378051E69B27500013603 /* NSDate.swift */,
 				84B378061E69B27500013603 /* String.swift */,
 				8431C6831E7D763600F47041 /* Color.swift */,
+				841C0BEA1EB9310D00902D10 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -932,6 +937,7 @@
 				841C0BD81EB92DB700902D10 /* GoalsModule.swift in Sources */,
 				841C0BE81EB92DB700902D10 /* GoalsWireframe.swift in Sources */,
 				84C334561E7980DD0088F561 /* Paginator.swift in Sources */,
+				841C0BEB1EB9310D00902D10 /* Constants.swift in Sources */,
 				848FFD531E76F30700F1BBF7 /* PagingCollectionViewController.swift in Sources */,
 				848FFD631E76F30700F1BBF7 /* SectionItemInterfaces.swift in Sources */,
 				848FFD5F1E76F30700F1BBF7 /* SectionItemDisplayDataCollection.swift in Sources */,
@@ -1018,6 +1024,7 @@
 				848FFD701E76F30700F1BBF7 /* TableViewDelegate.swift in Sources */,
 				8431C6AA1E7DA70100F47041 /* MenuWireframe.swift in Sources */,
 				848FFD5E1E76F30700F1BBF7 /* PagingTableViewController.swift in Sources */,
+				841C0BEF1EB9363800902D10 /* Color.swift in Sources */,
 				848FFD461E76F30700F1BBF7 /* EmptyView.swift in Sources */,
 				841461C31E798482007D5002 /* HomeViewController.swift in Sources */,
 				84B378081E69B27500013603 /* Appearance.swift in Sources */,
@@ -1041,6 +1048,7 @@
 				841C0BD71EB92DB700902D10 /* GoalsInterfaces.swift in Sources */,
 				841C0BD91EB92DB700902D10 /* GoalsModule.swift in Sources */,
 				848FFD521E76F30700F1BBF7 /* PagingPresenter.swift in Sources */,
+				841C0BEC1EB9310D00902D10 /* Constants.swift in Sources */,
 				841461BD1E798482007D5002 /* HomePresenter.swift in Sources */,
 				848FFD4A1E76F30700F1BBF7 /* ViewController.swift in Sources */,
 				848FFD661E76F30700F1BBF7 /* CollectionViewController.swift in Sources */,

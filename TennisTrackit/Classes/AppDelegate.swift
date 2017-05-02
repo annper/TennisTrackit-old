@@ -22,9 +22,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return navigationViewController
     }
+    
+    private func setupConstants() {
+        let processInfo = ProcessInfo.processInfo
+        
+        if let environment = Environment.determineEnvironmentWith(processInfo: processInfo) {
+            Constants.sharedInstance = Constants(environment: environment)
+        } else {
+            assertionFailure("no recognised environment set in the scheme launch arguments")
+        }
+    }
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        setupConstants()
         Appearance.setup()
         
         window = UIWindow(frame: UIScreen.main.bounds)

@@ -14,13 +14,10 @@ class GoalsInteractor: GoalsInteractorInput {
     
     func dataItems() -> [GoalsListDataItem] {
         var items = [GoalsListDataItem]()
+        var id = 0
         
-        for i in 0...15 {
-            let text = "Lorem Ipsum"
-            
-            let item = GoalsListDataItem(id: i, text: text)
-            items.append(item)
-        }
+        
+        
         
         return items
     }
