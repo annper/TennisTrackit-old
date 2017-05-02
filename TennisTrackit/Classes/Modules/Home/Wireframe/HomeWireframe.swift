@@ -27,7 +27,8 @@ class HomeWireframe: Wireframe {
     }
     
     func presentMenuModule() {
-        print("present menu module")
+        let menuModule = MenuModule.build()
+        pushViewInNavigationController(viewController: menuModule, animated: true)
     }
 
 }

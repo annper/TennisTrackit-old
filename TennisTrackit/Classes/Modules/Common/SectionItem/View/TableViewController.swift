@@ -68,7 +68,7 @@ class TableViewController<T: SectionItem>: UIViewController, SectionItemViewInpu
         tableView.delegate = tableViewDelegate
     }
     
-    func setUpNavigationBarImage() {
+    func setUpNavigationBarImageLeft() {
         
         let logoImage = UIImage(named: "goals")
         let logoImageView = UIImageView(image: logoImage)
@@ -77,6 +77,17 @@ class TableViewController<T: SectionItem>: UIViewController, SectionItemViewInpu
         let leftBarItem = UIBarButtonItem(customView: logoImageView)
         navigationItem.leftBarButtonItem = leftBarItem
 
+    }
+    
+    func setUpNavigationBarImageRight() {
+        
+        let logoImage = UIImage(named: "goals")
+        let logoImageView = UIImageView(image: logoImage)
+        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.frame = CGRect(x: 0.0, y: 0.0, width: 50.0, height: 40.0)
+        let rightBarItem = UIBarButtonItem(customView: logoImageView)
+        navigationItem.rightBarButtonItem = rightBarItem
+        
     }
     
     // MARK: - UIViewController
