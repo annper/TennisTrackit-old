@@ -10,7 +10,7 @@ import UIKit
 //import AppCommon
 
 struct GoalsModule {
-	
+
 	static func build() -> UIViewController {
         let module = buildModule()
 
@@ -18,7 +18,7 @@ struct GoalsModule {
 	}
     
     private static func buildModule() -> (viewController: GoalsViewController, presenter: GoalsPresenter) {
-        let viewController = GoalsViewController(nibName: "GoalsView", bundle: nil)
+        let viewController = GoalsViewController(nibName: nil, bundle: nil)
         let wireframe = GoalsWireframe()
         let interactor = GoalsInteractor()
 		let presenter = GoalsPresenter(wireframe: wireframe, interactor: interactor, userInterface: viewController)
@@ -33,7 +33,7 @@ struct GoalsModule {
         interactor.presenter = presenter
         
         viewController.eventHandler = presenter
-		
+        
 		return (viewController: viewController, presenter: presenter)
     }
     

@@ -29,20 +29,26 @@
 		841461C31E798482007D5002 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461AF1E798482007D5002 /* HomeViewController.swift */; };
 		841461C41E798482007D5002 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461B11E798482007D5002 /* HomeWireframe.swift */; };
 		841461C51E798482007D5002 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461B11E798482007D5002 /* HomeWireframe.swift */; };
-		841C0BB91EB9293E00902D10 /* GoalsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BAE1EB9293E00902D10 /* GoalsInterfaces.swift */; };
-		841C0BBA1EB9293E00902D10 /* GoalsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BAE1EB9293E00902D10 /* GoalsInterfaces.swift */; };
-		841C0BBB1EB9293E00902D10 /* GoalsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BAF1EB9293E00902D10 /* GoalsModule.swift */; };
-		841C0BBC1EB9293E00902D10 /* GoalsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BAF1EB9293E00902D10 /* GoalsModule.swift */; };
-		841C0BBD1EB9293E00902D10 /* GoalsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BB11EB9293E00902D10 /* GoalsInteractor.swift */; };
-		841C0BBE1EB9293E00902D10 /* GoalsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BB11EB9293E00902D10 /* GoalsInteractor.swift */; };
-		841C0BBF1EB9293E00902D10 /* GoalsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BB31EB9293E00902D10 /* GoalsPresenter.swift */; };
-		841C0BC01EB9293E00902D10 /* GoalsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BB31EB9293E00902D10 /* GoalsPresenter.swift */; };
-		841C0BC11EB9293E00902D10 /* GoalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841C0BB51EB9293E00902D10 /* GoalsView.xib */; };
-		841C0BC21EB9293E00902D10 /* GoalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841C0BB51EB9293E00902D10 /* GoalsView.xib */; };
-		841C0BC31EB9293E00902D10 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BB61EB9293E00902D10 /* GoalsViewController.swift */; };
-		841C0BC41EB9293E00902D10 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BB61EB9293E00902D10 /* GoalsViewController.swift */; };
-		841C0BC51EB9293E00902D10 /* GoalsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BB81EB9293E00902D10 /* GoalsWireframe.swift */; };
-		841C0BC61EB9293E00902D10 /* GoalsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BB81EB9293E00902D10 /* GoalsWireframe.swift */; };
+		841C0BD61EB92DB700902D10 /* GoalsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BC81EB92DB700902D10 /* GoalsInterfaces.swift */; };
+		841C0BD71EB92DB700902D10 /* GoalsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BC81EB92DB700902D10 /* GoalsInterfaces.swift */; };
+		841C0BD81EB92DB700902D10 /* GoalsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BC91EB92DB700902D10 /* GoalsModule.swift */; };
+		841C0BD91EB92DB700902D10 /* GoalsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BC91EB92DB700902D10 /* GoalsModule.swift */; };
+		841C0BDA1EB92DB700902D10 /* GoalsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BCB1EB92DB700902D10 /* GoalsInteractor.swift */; };
+		841C0BDB1EB92DB700902D10 /* GoalsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BCB1EB92DB700902D10 /* GoalsInteractor.swift */; };
+		841C0BDC1EB92DB700902D10 /* GoalsListDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BCC1EB92DB700902D10 /* GoalsListDataItem.swift */; };
+		841C0BDD1EB92DB700902D10 /* GoalsListDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BCC1EB92DB700902D10 /* GoalsListDataItem.swift */; };
+		841C0BDE1EB92DB700902D10 /* GoalsListDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BCE1EB92DB700902D10 /* GoalsListDisplayItem.swift */; };
+		841C0BDF1EB92DB700902D10 /* GoalsListDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BCE1EB92DB700902D10 /* GoalsListDisplayItem.swift */; };
+		841C0BE01EB92DB700902D10 /* GoalsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BCF1EB92DB700902D10 /* GoalsPresenter.swift */; };
+		841C0BE11EB92DB700902D10 /* GoalsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BCF1EB92DB700902D10 /* GoalsPresenter.swift */; };
+		841C0BE21EB92DB700902D10 /* GoalsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD11EB92DB700902D10 /* GoalsListTableViewCell.swift */; };
+		841C0BE31EB92DB700902D10 /* GoalsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD11EB92DB700902D10 /* GoalsListTableViewCell.swift */; };
+		841C0BE41EB92DB700902D10 /* GoalsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841C0BD21EB92DB700902D10 /* GoalsListTableViewCell.xib */; };
+		841C0BE51EB92DB700902D10 /* GoalsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841C0BD21EB92DB700902D10 /* GoalsListTableViewCell.xib */; };
+		841C0BE61EB92DB700902D10 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD31EB92DB700902D10 /* GoalsViewController.swift */; };
+		841C0BE71EB92DB700902D10 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD31EB92DB700902D10 /* GoalsViewController.swift */; };
+		841C0BE81EB92DB700902D10 /* GoalsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD51EB92DB700902D10 /* GoalsWireframe.swift */; };
+		841C0BE91EB92DB700902D10 /* GoalsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C0BD51EB92DB700902D10 /* GoalsWireframe.swift */; };
 		8431C6841E7D763600F47041 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6831E7D763600F47041 /* Color.swift */; };
 		8431C6861E7D86E100F47041 /* rockin_record_g.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8431C6851E7D86E100F47041 /* rockin_record_g.ttf */; };
 		8431C6871E7D86E100F47041 /* rockin_record_g.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8431C6851E7D86E100F47041 /* rockin_record_g.ttf */; };
@@ -171,13 +177,16 @@
 		841461AE1E798482007D5002 /* HomeListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeListTableViewCell.xib; sourceTree = "<group>"; };
 		841461AF1E798482007D5002 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		841461B11E798482007D5002 /* HomeWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
-		841C0BAE1EB9293E00902D10 /* GoalsInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsInterfaces.swift; sourceTree = "<group>"; };
-		841C0BAF1EB9293E00902D10 /* GoalsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsModule.swift; sourceTree = "<group>"; };
-		841C0BB11EB9293E00902D10 /* GoalsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsInteractor.swift; sourceTree = "<group>"; };
-		841C0BB31EB9293E00902D10 /* GoalsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsPresenter.swift; sourceTree = "<group>"; };
-		841C0BB51EB9293E00902D10 /* GoalsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalsView.xib; sourceTree = "<group>"; };
-		841C0BB61EB9293E00902D10 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
-		841C0BB81EB9293E00902D10 /* GoalsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsWireframe.swift; sourceTree = "<group>"; };
+		841C0BC81EB92DB700902D10 /* GoalsInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsInterfaces.swift; sourceTree = "<group>"; };
+		841C0BC91EB92DB700902D10 /* GoalsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsModule.swift; sourceTree = "<group>"; };
+		841C0BCB1EB92DB700902D10 /* GoalsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsInteractor.swift; sourceTree = "<group>"; };
+		841C0BCC1EB92DB700902D10 /* GoalsListDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsListDataItem.swift; sourceTree = "<group>"; };
+		841C0BCE1EB92DB700902D10 /* GoalsListDisplayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsListDisplayItem.swift; sourceTree = "<group>"; };
+		841C0BCF1EB92DB700902D10 /* GoalsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsPresenter.swift; sourceTree = "<group>"; };
+		841C0BD11EB92DB700902D10 /* GoalsListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsListTableViewCell.swift; sourceTree = "<group>"; };
+		841C0BD21EB92DB700902D10 /* GoalsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalsListTableViewCell.xib; sourceTree = "<group>"; };
+		841C0BD31EB92DB700902D10 /* GoalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
+		841C0BD51EB92DB700902D10 /* GoalsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsWireframe.swift; sourceTree = "<group>"; };
 		8431C6831E7D763600F47041 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8431C6851E7D86E100F47041 /* rockin_record_g.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rockin_record_g.ttf; sourceTree = "<group>"; };
 		8431C68A1E7DA70100F47041 /* MenuInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuInteractor.swift; sourceTree = "<group>"; };
@@ -337,48 +346,51 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
-		841C0BAD1EB9293E00902D10 /* Goals */ = {
+		841C0BC71EB92DB700902D10 /* Goals */ = {
 			isa = PBXGroup;
 			children = (
-				841C0BAE1EB9293E00902D10 /* GoalsInterfaces.swift */,
-				841C0BAF1EB9293E00902D10 /* GoalsModule.swift */,
-				841C0BB01EB9293E00902D10 /* Interactor */,
-				841C0BB21EB9293E00902D10 /* Presenter */,
-				841C0BB41EB9293E00902D10 /* View */,
-				841C0BB71EB9293E00902D10 /* Wireframe */,
+				841C0BC81EB92DB700902D10 /* GoalsInterfaces.swift */,
+				841C0BC91EB92DB700902D10 /* GoalsModule.swift */,
+				841C0BCA1EB92DB700902D10 /* Interactor */,
+				841C0BCD1EB92DB700902D10 /* Presenter */,
+				841C0BD01EB92DB700902D10 /* View */,
+				841C0BD41EB92DB700902D10 /* Wireframe */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
 		};
-		841C0BB01EB9293E00902D10 /* Interactor */ = {
+		841C0BCA1EB92DB700902D10 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				841C0BB11EB9293E00902D10 /* GoalsInteractor.swift */,
+				841C0BCB1EB92DB700902D10 /* GoalsInteractor.swift */,
+				841C0BCC1EB92DB700902D10 /* GoalsListDataItem.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		841C0BB21EB9293E00902D10 /* Presenter */ = {
+		841C0BCD1EB92DB700902D10 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				841C0BB31EB9293E00902D10 /* GoalsPresenter.swift */,
+				841C0BCE1EB92DB700902D10 /* GoalsListDisplayItem.swift */,
+				841C0BCF1EB92DB700902D10 /* GoalsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		841C0BB41EB9293E00902D10 /* View */ = {
+		841C0BD01EB92DB700902D10 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				841C0BB51EB9293E00902D10 /* GoalsView.xib */,
-				841C0BB61EB9293E00902D10 /* GoalsViewController.swift */,
+				841C0BD11EB92DB700902D10 /* GoalsListTableViewCell.swift */,
+				841C0BD21EB92DB700902D10 /* GoalsListTableViewCell.xib */,
+				841C0BD31EB92DB700902D10 /* GoalsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		841C0BB71EB9293E00902D10 /* Wireframe */ = {
+		841C0BD41EB92DB700902D10 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				841C0BB81EB9293E00902D10 /* GoalsWireframe.swift */,
+				841C0BD51EB92DB700902D10 /* GoalsWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -616,7 +628,7 @@
 		84B377FC1E69AEE700013603 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				841C0BAD1EB9293E00902D10 /* Goals */,
+				841C0BC71EB92DB700902D10 /* Goals */,
 				8431C6881E7DA70100F47041 /* Menu */,
 				841461A31E798482007D5002 /* Home */,
 				848FFD241E76F30700F1BBF7 /* Common */,
@@ -773,6 +785,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841C0BE41EB92DB700902D10 /* GoalsListTableViewCell.xib in Resources */,
 				848FFD571E76F30700F1BBF7 /* PagingLoadingView.xib in Resources */,
 				8431C6861E7D86E100F47041 /* rockin_record_g.ttf in Resources */,
 				848FFD471E76F30700F1BBF7 /* EmptyView.xib in Resources */,
@@ -780,7 +793,6 @@
 				841461C01E798482007D5002 /* HomeListTableViewCell.xib in Resources */,
 				84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */,
 				84839C0E1E65D08A00751F65 /* Assets.xcassets in Resources */,
-				841C0BC11EB9293E00902D10 /* GoalsView.xib in Resources */,
 				848FFD5B1E76F30700F1BBF7 /* PagingStaleDataView.xib in Resources */,
 				84B377F71E69AE3000013603 /* environment.plist in Resources */,
 			);
@@ -803,8 +815,8 @@
 				848FFD481E76F30700F1BBF7 /* EmptyView.xib in Resources */,
 				84839C2B1E65D19200751F65 /* LaunchScreen.storyboard in Resources */,
 				84839C2C1E65D19200751F65 /* Assets.xcassets in Resources */,
+				841C0BE51EB92DB700902D10 /* GoalsListTableViewCell.xib in Resources */,
 				848FFD5C1E76F30700F1BBF7 /* PagingStaleDataView.xib in Resources */,
-				841C0BC21EB9293E00902D10 /* GoalsView.xib in Resources */,
 				841461C11E798482007D5002 /* HomeListTableViewCell.xib in Resources */,
 				8431C6A61E7DA70100F47041 /* MenuListTableViewCell.xib in Resources */,
 				84B377F81E69AE3000013603 /* environment.plist in Resources */,
@@ -917,30 +929,33 @@
 				84B3781D1E69B5AF00013603 /* UIView.swift in Sources */,
 				84B378151E69B5AF00013603 /* NSIndexPath.swift in Sources */,
 				84C334591E79905F0088F561 /* Array.swift in Sources */,
-				841C0BBB1EB9293E00902D10 /* GoalsModule.swift in Sources */,
+				841C0BD81EB92DB700902D10 /* GoalsModule.swift in Sources */,
+				841C0BE81EB92DB700902D10 /* GoalsWireframe.swift in Sources */,
 				84C334561E7980DD0088F561 /* Paginator.swift in Sources */,
 				848FFD531E76F30700F1BBF7 /* PagingCollectionViewController.swift in Sources */,
 				848FFD631E76F30700F1BBF7 /* SectionItemInterfaces.swift in Sources */,
 				848FFD5F1E76F30700F1BBF7 /* SectionItemDisplayDataCollection.swift in Sources */,
+				841C0BDE1EB92DB700902D10 /* GoalsListDisplayItem.swift in Sources */,
 				84B377FD1E69AEE700013603 /* AppDelegate.swift in Sources */,
 				84B3781F1E69B5AF00013603 /* UIViewController.swift in Sources */,
 				848FFD6F1E76F30700F1BBF7 /* TableViewDelegate.swift in Sources */,
 				848FFD5D1E76F30700F1BBF7 /* PagingTableViewController.swift in Sources */,
-				841C0BB91EB9293E00902D10 /* GoalsInterfaces.swift in Sources */,
+				841C0BD61EB92DB700902D10 /* GoalsInterfaces.swift in Sources */,
 				848FFD451E76F30700F1BBF7 /* EmptyView.swift in Sources */,
 				841461C21E798482007D5002 /* HomeViewController.swift in Sources */,
 				8431C69B1E7DA70100F47041 /* MenuInterfaces.swift in Sources */,
-				841C0BBD1EB9293E00902D10 /* GoalsInteractor.swift in Sources */,
+				841C0BDA1EB92DB700902D10 /* GoalsInteractor.swift in Sources */,
 				84B378071E69B27500013603 /* Appearance.swift in Sources */,
 				84B378171E69B5AF00013603 /* NSObject.swift in Sources */,
 				848FFD691E76F30700F1BBF7 /* CollectionViewDelegate.swift in Sources */,
 				8431C6A11E7DA70100F47041 /* MenuPresenter.swift in Sources */,
 				848FFD6B1E76F30700F1BBF7 /* TableViewController.swift in Sources */,
+				841C0BE21EB92DB700902D10 /* GoalsListTableViewCell.swift in Sources */,
 				8431C6A31E7DA70100F47041 /* MenuListTableViewCell.swift in Sources */,
 				848FFD4D1E76F30700F1BBF7 /* PagingInteractor.swift in Sources */,
+				841C0BE61EB92DB700902D10 /* GoalsViewController.swift in Sources */,
 				841461B81E798482007D5002 /* HomeListDataItem.swift in Sources */,
 				841461BE1E798482007D5002 /* HomeListTableViewCell.swift in Sources */,
-				841C0BC31EB9293E00902D10 /* GoalsViewController.swift in Sources */,
 				841461BA1E798482007D5002 /* HomeListDisplayItem.swift in Sources */,
 				84B3780D1E69B27500013603 /* String.swift in Sources */,
 				8431C6A71E7DA70100F47041 /* MenuViewController.swift in Sources */,
@@ -949,15 +964,16 @@
 				841461B61E798482007D5002 /* HomeInteractor.swift in Sources */,
 				8431C6841E7D763600F47041 /* Color.swift in Sources */,
 				84C3345C1E7990F00088F561 /* NSRange.swift in Sources */,
-				841C0BBF1EB9293E00902D10 /* GoalsPresenter.swift in Sources */,
 				848FFD511E76F30700F1BBF7 /* PagingPresenter.swift in Sources */,
 				841461BC1E798482007D5002 /* HomePresenter.swift in Sources */,
 				8431C6971E7DA70100F47041 /* MenuInteractor.swift in Sources */,
+				841C0BE01EB92DB700902D10 /* GoalsPresenter.swift in Sources */,
 				848FFD491E76F30700F1BBF7 /* ViewController.swift in Sources */,
 				848FFD651E76F30700F1BBF7 /* CollectionViewController.swift in Sources */,
 				848FFD4F1E76F30700F1BBF7 /* PagingInterfaces.swift in Sources */,
 				848FFD671E76F30700F1BBF7 /* CollectionViewDataSource.swift in Sources */,
 				84B3781B1E69B5AF00013603 /* UITableView.swift in Sources */,
+				841C0BDC1EB92DB700902D10 /* GoalsListDataItem.swift in Sources */,
 				841461C41E798482007D5002 /* HomeWireframe.swift in Sources */,
 				84B3780B1E69B27500013603 /* NSDate.swift in Sources */,
 				841461B41E798482007D5002 /* HomeModule.swift in Sources */,
@@ -966,7 +982,6 @@
 				8431C6991E7DA70100F47041 /* MenuListDataItem.swift in Sources */,
 				84B378191E69B5AF00013603 /* UICollectionView.swift in Sources */,
 				8431C69D1E7DA70100F47041 /* MenuModule.swift in Sources */,
-				841C0BC51EB9293E00902D10 /* GoalsWireframe.swift in Sources */,
 				84B378091E69B27500013603 /* Font.swift in Sources */,
 				848FFD6D1E76F30700F1BBF7 /* TableViewDataSource.swift in Sources */,
 			);
@@ -988,6 +1003,7 @@
 				8431C6981E7DA70100F47041 /* MenuInteractor.swift in Sources */,
 				8431C69C1E7DA70100F47041 /* MenuInterfaces.swift in Sources */,
 				848FFD5A1E76F30700F1BBF7 /* PagingStaleDataView.swift in Sources */,
+				841C0BE11EB92DB700902D10 /* GoalsPresenter.swift in Sources */,
 				848FFD561E76F30700F1BBF7 /* PagingLoadingView.swift in Sources */,
 				84B3781E1E69B5AF00013603 /* UIView.swift in Sources */,
 				84B378161E69B5AF00013603 /* NSIndexPath.swift in Sources */,
@@ -996,7 +1012,6 @@
 				848FFD541E76F30700F1BBF7 /* PagingCollectionViewController.swift in Sources */,
 				848FFD641E76F30700F1BBF7 /* SectionItemInterfaces.swift in Sources */,
 				8431C6A21E7DA70100F47041 /* MenuPresenter.swift in Sources */,
-				841C0BC61EB9293E00902D10 /* GoalsWireframe.swift in Sources */,
 				848FFD601E76F30700F1BBF7 /* SectionItemDisplayDataCollection.swift in Sources */,
 				84B377FE1E69AEE700013603 /* AppDelegate.swift in Sources */,
 				84B378201E69B5AF00013603 /* UIViewController.swift in Sources */,
@@ -1006,38 +1021,41 @@
 				848FFD461E76F30700F1BBF7 /* EmptyView.swift in Sources */,
 				841461C31E798482007D5002 /* HomeViewController.swift in Sources */,
 				84B378081E69B27500013603 /* Appearance.swift in Sources */,
+				841C0BE71EB92DB700902D10 /* GoalsViewController.swift in Sources */,
 				84B378181E69B5AF00013603 /* NSObject.swift in Sources */,
 				848FFD6A1E76F30700F1BBF7 /* CollectionViewDelegate.swift in Sources */,
 				848FFD6C1E76F30700F1BBF7 /* TableViewController.swift in Sources */,
+				841C0BDD1EB92DB700902D10 /* GoalsListDataItem.swift in Sources */,
+				841C0BE91EB92DB700902D10 /* GoalsWireframe.swift in Sources */,
 				848FFD4E1E76F30700F1BBF7 /* PagingInteractor.swift in Sources */,
 				841461B91E798482007D5002 /* HomeListDataItem.swift in Sources */,
 				8431C69A1E7DA70100F47041 /* MenuListDataItem.swift in Sources */,
 				841461BF1E798482007D5002 /* HomeListTableViewCell.swift in Sources */,
 				841461BB1E798482007D5002 /* HomeListDisplayItem.swift in Sources */,
 				84B3780E1E69B27500013603 /* String.swift in Sources */,
+				841C0BE31EB92DB700902D10 /* GoalsListTableViewCell.swift in Sources */,
 				8431C69E1E7DA70100F47041 /* MenuModule.swift in Sources */,
 				848FFD4C1E76F30700F1BBF7 /* Wireframe.swift in Sources */,
 				841461B71E798482007D5002 /* HomeInteractor.swift in Sources */,
 				84C3345D1E7990F00088F561 /* NSRange.swift in Sources */,
-				841C0BBA1EB9293E00902D10 /* GoalsInterfaces.swift in Sources */,
-				841C0BBC1EB9293E00902D10 /* GoalsModule.swift in Sources */,
+				841C0BD71EB92DB700902D10 /* GoalsInterfaces.swift in Sources */,
+				841C0BD91EB92DB700902D10 /* GoalsModule.swift in Sources */,
 				848FFD521E76F30700F1BBF7 /* PagingPresenter.swift in Sources */,
 				841461BD1E798482007D5002 /* HomePresenter.swift in Sources */,
 				848FFD4A1E76F30700F1BBF7 /* ViewController.swift in Sources */,
 				848FFD661E76F30700F1BBF7 /* CollectionViewController.swift in Sources */,
 				848FFD501E76F30700F1BBF7 /* PagingInterfaces.swift in Sources */,
-				841C0BBE1EB9293E00902D10 /* GoalsInteractor.swift in Sources */,
+				841C0BDB1EB92DB700902D10 /* GoalsInteractor.swift in Sources */,
 				848FFD681E76F30700F1BBF7 /* CollectionViewDataSource.swift in Sources */,
 				8431C6A01E7DA70100F47041 /* MenuListDisplayItem.swift in Sources */,
 				84B3781C1E69B5AF00013603 /* UITableView.swift in Sources */,
 				8431C6A81E7DA70100F47041 /* MenuViewController.swift in Sources */,
 				841461C51E798482007D5002 /* HomeWireframe.swift in Sources */,
 				84B3780C1E69B27500013603 /* NSDate.swift in Sources */,
-				841C0BC01EB9293E00902D10 /* GoalsPresenter.swift in Sources */,
-				841C0BC41EB9293E00902D10 /* GoalsViewController.swift in Sources */,
 				841461B51E798482007D5002 /* HomeModule.swift in Sources */,
 				841461B31E798482007D5002 /* HomeInterfaces.swift in Sources */,
 				84B3781A1E69B5AF00013603 /* UICollectionView.swift in Sources */,
+				841C0BDF1EB92DB700902D10 /* GoalsListDisplayItem.swift in Sources */,
 				84B3780A1E69B27500013603 /* Font.swift in Sources */,
 				8431C6A41E7DA70100F47041 /* MenuListTableViewCell.swift in Sources */,
 				848FFD6E1E76F30700F1BBF7 /* TableViewDataSource.swift in Sources */,

@@ -31,7 +31,7 @@ class MenuPresenter: SectionItemPresenter<MenuListDisplayItem>, MenuViewOutput, 
     func rowTappedWith(id: Int) {
         switch id {
         case 0:
-            // Home module
+            // Home module - possibly remove this in future due to the back button in nav bar
             wireframe.showHomeModule()
         case 1:
             // Goals module

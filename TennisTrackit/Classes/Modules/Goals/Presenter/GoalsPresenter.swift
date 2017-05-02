@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoalsPresenter: GoalsViewOutput, GoalsInteractorOutput {
+class GoalsPresenter: SectionItemPresenter<GoalsListDisplayItem>, GoalsViewOutput, GoalsInteractorOutput {
     
     var wireframe: GoalsWireframe
     var interactor: GoalsInteractorInput
@@ -23,13 +23,17 @@ class GoalsPresenter: GoalsViewOutput, GoalsInteractorOutput {
     }
     
     // MARK: - GoalsViewOutput
-
-    func viewDidLoad() {
-
-    }
     
     func viewWillAppear(animated: Bool) {
-
+        updateSectionItemUserInterface(userInterface: userInterface, reloadData: false)
     }
-	
+    
+    // MARK: - SectionItemPresenter
+    
+    override func displayDataItems() -> [GoalsListDisplayItem]? {
+        let dataItems = interactor.dataItems()
+        
+        return dataItems.map { GoalsListDisplayItem(id: $0.id, text: $0.text) }
+    }
+
 }

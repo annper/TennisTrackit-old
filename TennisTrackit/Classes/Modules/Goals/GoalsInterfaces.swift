@@ -9,20 +9,19 @@
 /** view **/
 
 protocol GoalsViewOutput: class {
-    func viewDidLoad()
     func viewWillAppear(animated: Bool)
 }
 
-protocol GoalsViewInput: class {
-    // Goals view inputs
+protocol GoalsViewInput: class, SectionItemViewInput {
+    
 }
 
 /** interactor **/
 
 protocol GoalsInteractorInput: class {
-    // Goals interactor inputs
+    func dataItems() -> [GoalsListDataItem]
 }
 
 protocol GoalsInteractorOutput: class {
-    // Goals interactor outputs
+    
 }
