@@ -13,6 +13,8 @@ class GoalDetailPresenter: GoalDetailViewOutput, GoalDetailInteractorOutput {
     var wireframe: GoalDetailWireframe
     var interactor: GoalDetailInteractorInput
     weak var userInterface: GoalDetailViewInput!
+    
+    var goalDetailDataItem: GoalDetailDataItem!
 	
     // MARK: - GoalDetailPresenter
     

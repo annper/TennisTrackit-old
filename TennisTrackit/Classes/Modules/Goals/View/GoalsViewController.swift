@@ -36,7 +36,7 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         
         temp.didSelectRowAtIndexPath = { [weak self] (indexPath, object) in
 			guard let strongSelf = self else { return }
-            strongSelf.eventHandler.openGoalDetailWith(item: object)
+            strongSelf.eventHandler.openGoalDetailWith(displayItem: object)
         }
         
         return temp
@@ -58,7 +58,7 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     
     @objc private func didTapAddNewButton() {
         print("did tap add new")
-        eventHandler.openGoalDetailWith(item: nil)
+        eventHandler.openGoalDetailWith(displayItem: nil)
     }
         
     override func setupTableView() {

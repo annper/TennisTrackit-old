@@ -11,7 +11,7 @@
 protocol GoalsViewOutput: class {
     func viewWillAppear(animated: Bool)
     func openMenu()
-    func openGoalDetailWith(item: Any?)
+    func openGoalDetailWith(displayItem: GoalsListDisplayItem?)
 }
 
 protocol GoalsViewInput: class, SectionItemViewInput {
@@ -22,6 +22,7 @@ protocol GoalsViewInput: class, SectionItemViewInput {
 
 protocol GoalsInteractorInput: class {
     func dataItems() -> [GoalsListDataItem]
+    func goalItemWith(display: GoalsListDisplayItem) -> GoalDetailDataItem?
 }
 
 protocol GoalsInteractorOutput: class {

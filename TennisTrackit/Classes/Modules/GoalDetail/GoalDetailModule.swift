@@ -7,13 +7,14 @@
 //
 
 import UIKit
-//import AppCommon
 
 struct GoalDetailModule {
 	
-	static func build() -> UIViewController {
+    static func buildWith(item: GoalDetailDataItem?) -> UIViewController {
         let module = buildModule()
 
+        module.presenter.goalDetailDataItem = item
+        
         return module.viewController
 	}
     

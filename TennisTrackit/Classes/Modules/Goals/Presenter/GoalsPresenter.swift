@@ -32,8 +32,14 @@ class GoalsPresenter: SectionItemPresenter<GoalsListDisplayItem>, GoalsViewOutpu
         wireframe.pushMenu()
     }
     
-    func openGoalDetailWith(item: Any?) {
-        wireframe.pushNewGoalWith(item: item)
+    func openGoalDetailWith(displayItem: GoalsListDisplayItem?) {
+        var detailItem: GoalDetailDataItem? = nil
+        
+        if let item = displayItem {
+            detailItem = interactor.goalItemWith(display: item)
+        }
+        
+        wireframe.pushNewGoalWith(item: detailItem)
     }
     
     // MARK: - SectionItemPresenter
