@@ -57,7 +57,6 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     }
     
     @objc private func didTapAddNewButton() {
-        print("did tap add new")
         eventHandler.openGoalDetailWith(displayItem: nil)
     }
         
@@ -127,27 +126,5 @@ class GoalsListTableViewDataSource: TableViewDataSource <GoalsListDisplayItem> {
         
         return cell
     }
-    
-//    override func tableView(
-//        tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        
-//        let object = objectWithCell(nil, indexPath: indexPath)
-//        let reuseIdentifier = object.reuseIdentifier
-//        
-//        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
-//        
-//        // callback to setup cell
-//        if let closure = setupCellWithObject {
-//            let object = objectWithCell(cell, indexPath: indexPath)
-//            
-//            closure(cell: cell, object: object)
-//        } else if let closureWithIndexPath = setupCellWithObjectForIndexPath {
-//            let object = objectWithCell(cell, indexPath: indexPath)
-//            
-//            closureWithIndexPath(cell: cell, object: object, indexPath: indexPath)
-//        }
-//        
-//        return cell
-//    }
 }
 
