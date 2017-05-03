@@ -11,7 +11,7 @@ import UIKit
 class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewInput {
     
     var eventHandler: GoalsViewOutput!
-        
+    
     override var lazyTableViewDataSource:TableViewDataSource<GoalsListDisplayItem> {
         let reuseIdentifier = GoalsListTableViewCell.reuseIdentifier()
         let temp = TableViewDataSource<GoalsListDisplayItem>(reuseIdentifier: reuseIdentifier)
@@ -48,10 +48,19 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func tableHeaderView() -> GoalsListTableHeaderView {
+        let tableHeaderView = GoalsListTableHeaderView.viewWithDerivedNibName() as! GoalsListTableHeaderView
+        
+        // TODO: Hook up action for tapping "Add new" button
+        
+        return tableHeaderView
+    }
+    
     override func setupTableView() {
         super.setupTableView()
         
         // configure table view
+        tableView.tableHeaderView = tableHeaderView()
         tableView.register(GoalsListTableViewCell.nib(), forCellReuseIdentifier: GoalsListTableViewCell.reuseIdentifier())
     }
     

@@ -19,7 +19,7 @@ class MenuWireframe: Wireframe {
     }
     
     func showGoalsModule() {
-        
+        // Pop or push controller based on the order of screens in the navigation stack
         if (previousViewController()?.isKind(of: GoalsViewController.self))! {
             _ = viewController.navigationController?.popViewController(animated: true)
             return

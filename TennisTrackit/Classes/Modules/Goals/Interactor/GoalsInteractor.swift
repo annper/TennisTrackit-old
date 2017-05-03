@@ -20,6 +20,7 @@ class GoalsInteractor: GoalsInteractorInput {
         var id = 0
         
         guard let goals = Constants.sharedInstance.UserGoals else {
+//            items.append(GoalsListDataItem(id: id, title: "test", description: "test desc"))
             return items
         }
         
