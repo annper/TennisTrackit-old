@@ -49,7 +49,7 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     private func tableHeaderView() -> GoalsListTableHeaderView {
         let tableHeaderView = GoalsListTableHeaderView.viewWithDerivedNibName() as! GoalsListTableHeaderView
         
-        // TODO: Hook up action for tapping "Add new" button
+        // TODO: - Hook up action for tapping "Add new" button
         
         return tableHeaderView
     }

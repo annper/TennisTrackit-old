@@ -19,7 +19,8 @@ class HomeWireframe: Wireframe {
     }
     
     func presentGoalsModule() {
-        print("present goals")
+        let goalsViewController = GoalsModule.build()
+        pushViewInNavigationController(viewController: goalsViewController, animated: true)
     }
     
     func presentSkillsModule() {
