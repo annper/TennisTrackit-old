@@ -11,6 +11,7 @@
 protocol GoalDetailViewOutput: class {
     func viewDidLoad()
     func viewWillAppear(animated: Bool)
+    func openMenu()
 }
 
 protocol GoalDetailViewInput: class {

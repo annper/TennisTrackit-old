@@ -14,11 +14,9 @@ class GoalDetailWireframe: Wireframe {
     
     // MARK: - GoalDetailWireframe
     
-	/*
-	// Example code: how to create and present a module
-    func presentHelpModule() {
-        let helpModule = HelpModule.build()
-        presentViewInNavigationController(helpModule, animated: true)
+    func pushMenu() {
+        let menuViewController = MenuModule.build()
+        pushViewInNavigationController(viewController: menuViewController, animated: true)
     }
-	*/
+    
 }

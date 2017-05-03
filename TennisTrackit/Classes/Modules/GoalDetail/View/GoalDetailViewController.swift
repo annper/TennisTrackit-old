@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import AppCommon
 
 class GoalDetailViewController: ViewController, GoalDetailViewInput {
     
@@ -17,6 +16,9 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
 
     override func setupNavigationBar() {
         super.setupNavigationBar()
+        
+        setUpNavigationBarImageLeft()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburger.png"), style: .plain, target: self, action: #selector(self.didTapMenuBarButton(button:)))
     }
     
     override func setupView() {
@@ -33,6 +35,10 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         eventHandler.viewWillAppear(animated: animated)
+    }
+    
+    @objc private func didTapMenuBarButton(button: UIBarButtonItem) {
+        eventHandler.openMenu()
     }
     
     // MARK: - GoalDetailViewInput

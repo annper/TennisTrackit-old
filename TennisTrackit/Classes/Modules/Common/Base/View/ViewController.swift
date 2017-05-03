@@ -42,6 +42,17 @@ class ViewController : UIViewController {
         navigationItem.titleView = headerView
     }
     
+    func setUpNavigationBarImageLeft() {
+        
+        let logoImage = UIImage(named: "goals")
+        let logoImageView = UIImageView(image: logoImage)
+        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.frame = CGRect(x: 0.0, y: 0.0, width: 50.0, height: 40.0)
+        let leftBarItem = UIBarButtonItem(customView: logoImageView)
+        navigationItem.leftBarButtonItem = leftBarItem
+        
+    }
+    
     // MARK: - UIViewController
     
     override func viewDidLoad() {

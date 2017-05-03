@@ -33,5 +33,9 @@ class GoalDetailPresenter: GoalDetailViewOutput, GoalDetailInteractorOutput {
     func viewWillAppear(animated: Bool) {
 
     }
+    
+    func openMenu() {
+        wireframe.pushMenu()
+    }
 	
 }
