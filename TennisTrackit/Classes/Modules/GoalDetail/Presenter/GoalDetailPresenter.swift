@@ -27,7 +27,7 @@ class GoalDetailPresenter: GoalDetailViewOutput, GoalDetailInteractorOutput {
     // MARK: - GoalDetailViewOutput
 
     func viewDidLoad() {
-
+        userInterface.setupView(goal: goalDetailDataItem)
     }
     
     func viewWillAppear(animated: Bool) {

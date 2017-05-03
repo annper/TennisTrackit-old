@@ -17,7 +17,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
 
     override func setupNavigationBar() {
         super.setupNavigationBar()
-        navigationItem.title = NSLocalizedString("GoalDetail", comment: "")
     }
     
     override func setupView() {
@@ -37,5 +36,16 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     }
     
     // MARK: - GoalDetailViewInput
+    
+    func setupView(goal: GoalDetailDataItem?) {
+        
+        if let goal = goal {
+            navigationItem.title = goal.title
+        } else {
+            navigationItem.title = "New goal".localized()
+        }
+        
+        
+    }
 
 }

@@ -14,7 +14,7 @@ protocol GoalDetailViewOutput: class {
 }
 
 protocol GoalDetailViewInput: class {
-    // GoalDetail view inputs
+    func setupView(goal: GoalDetailDataItem?)
 }
 
 /** interactor **/
