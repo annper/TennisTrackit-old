@@ -19,15 +19,13 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         temp.setupCellWithObject = { (cell, object) -> Void in
             let cell = cell as! GoalsListTableViewCell
             cell.setupWith(display: object)
-//            cell.textLabel!.text = object.title
-            
         }
         
         return temp
     }
     
     override var lazyTableViewDelegate:TableViewDelegate<GoalsListDisplayItem> {
-        let temp = TableViewDelegate<GoalsListDisplayItem>()
+        let temp = GoalsTableViewDelegate()
         
         temp.didSelectRowAtIndexPath = { [weak self] (indexPath, object) in
 			guard let strongSelf = self else { return }
@@ -60,8 +58,8 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         super.setupTableView()
         
         // configure table view
-        tableView.tableHeaderView = tableHeaderView()
         tableView.register(GoalsListTableViewCell.nib(), forCellReuseIdentifier: GoalsListTableViewCell.reuseIdentifier())
+        tableView.tableHeaderView = tableHeaderView()
     }
     
     override func setupNavigationBar() {
@@ -85,4 +83,14 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     
     // MARK: - GoalsViewInput
 
+}
+
+class GoalsTableViewDelegate: TableViewDelegate<GoalsListDisplayItem> {
+    
+    private let rowHeight: CGFloat = 60
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return rowHeight
+    }
+    
 }

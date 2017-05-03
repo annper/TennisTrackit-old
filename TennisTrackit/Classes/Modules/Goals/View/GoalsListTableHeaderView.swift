@@ -22,4 +22,8 @@ class GoalsListTableHeaderView: UIView {
         }
     }
     
+    override func awakeFromNib() {
+        backgroundColor = Color.homeYellow()
+    }
+    
 }
