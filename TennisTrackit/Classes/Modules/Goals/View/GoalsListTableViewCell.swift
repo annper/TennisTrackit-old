@@ -29,6 +29,7 @@ class GoalsListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = Color.navigationYellow()
     }
     
     func setupWith(display: GoalsListDisplayItem) {

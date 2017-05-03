@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 import Localize_Swift
 
-class GoalsListTableHeaderView: UIView {
-    
+class GoalsAddNewListTableViewCell: UITableViewCell {
     
     @IBOutlet var addNewButton: UIButton! {
         didSet {
@@ -23,7 +22,7 @@ class GoalsListTableHeaderView: UIView {
     }
     
     override func awakeFromNib() {
-        backgroundColor = Color.homeYellow()
+        super.awakeFromNib()
+        backgroundColor = Color.navigationYellow()
     }
-    
 }

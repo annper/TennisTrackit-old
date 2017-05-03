@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewInput {
     
@@ -14,11 +15,16 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     
     override var lazyTableViewDataSource:TableViewDataSource<GoalsListDisplayItem> {
         let reuseIdentifier = GoalsListTableViewCell.reuseIdentifier()
-        let temp = TableViewDataSource<GoalsListDisplayItem>(reuseIdentifier: reuseIdentifier)
+        let temp = GoalsListTableViewDataSource(reuseIdentifier: reuseIdentifier)
         
-        temp.setupCellWithObject = { (cell, object) -> Void in
-            let cell = cell as! GoalsListTableViewCell
-            cell.setupWith(display: object)
+        temp.setupCellWithObjectForIndexPath = { (cell, object, indexPath) ->
+            Void in
+            if indexPath.row == 0 {
+                _ = cell as! GoalsAddNewListTableViewCell
+            } else {
+                let cell = cell as! GoalsListTableViewCell
+                cell.setupWith(display: object)
+            }
         }
         
         return temp
@@ -46,20 +52,13 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func tableHeaderView() -> GoalsListTableHeaderView {
-        let tableHeaderView = GoalsListTableHeaderView.viewWithDerivedNibName() as! GoalsListTableHeaderView
-        
-        // TODO: - Hook up action for tapping "Add new" button
-        
-        return tableHeaderView
-    }
-    
     override func setupTableView() {
         super.setupTableView()
         
         // configure table view
         tableView.register(GoalsListTableViewCell.nib(), forCellReuseIdentifier: GoalsListTableViewCell.reuseIdentifier())
-        tableView.tableHeaderView = tableHeaderView()
+        tableView.register(GoalsAddNewListTableViewCell.nib(), forCellReuseIdentifier: GoalsAddNewListTableViewCell.reuseIdentifier())
+        
     }
     
     override func setupNavigationBar() {
@@ -74,7 +73,11 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        eventHandler.viewWillAppear(animated: animated)
+        eventHandler.viewWillAppear(animated: animated)        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     @objc private func didTapMenuBarButton(button: UIBarButtonItem) {
@@ -94,3 +97,47 @@ class GoalsTableViewDelegate: TableViewDelegate<GoalsListDisplayItem> {
     }
     
 }
+
+class GoalsListTableViewDataSource: TableViewDataSource <GoalsListDisplayItem> {
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reuseIdentifier = indexPath.row == 0 ? GoalsAddNewListTableViewCell.reuseIdentifier() : GoalsListTableViewCell.reuseIdentifier()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        
+        // callback to setup cell
+        if let closure = setupCellWithObject {
+            let object = objectWithCell(cell: cell, indexPath: indexPath as NSIndexPath)
+            closure(cell, object)
+        } else if let closureWithIndexPath = setupCellWithObjectForIndexPath {
+            let object = objectWithCell(cell: cell, indexPath: indexPath as NSIndexPath)
+            closureWithIndexPath(cell, object, indexPath as NSIndexPath)
+        }
+        
+        return cell
+    }
+    
+//    override func tableView(
+//        tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        
+//        let object = objectWithCell(nil, indexPath: indexPath)
+//        let reuseIdentifier = object.reuseIdentifier
+//        
+//        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
+//        
+//        // callback to setup cell
+//        if let closure = setupCellWithObject {
+//            let object = objectWithCell(cell, indexPath: indexPath)
+//            
+//            closure(cell: cell, object: object)
+//        } else if let closureWithIndexPath = setupCellWithObjectForIndexPath {
+//            let object = objectWithCell(cell, indexPath: indexPath)
+//            
+//            closureWithIndexPath(cell: cell, object: object, indexPath: indexPath)
+//        }
+//        
+//        return cell
+//    }
+}
+

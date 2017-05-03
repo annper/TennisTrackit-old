@@ -61,7 +61,7 @@ class TableViewController<T: SectionItem>: UIViewController, SectionItemViewInpu
     
     func setupTableView() {
      
-        edgesForExtendedLayout = []
+        edgesForExtendedLayout = [UIRectEdge.bottom]
         tableView.tableFooterView = UIView()
         tableView.showsVerticalScrollIndicator = false
         tableView.dataSource = tableViewDataSource

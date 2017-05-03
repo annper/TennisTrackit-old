@@ -19,8 +19,10 @@ class GoalsInteractor: GoalsInteractorInput {
         var items = [GoalsListDataItem]()
         var id = 0
         
+        // Always add this first cell to include the 'add new' button
+        items.append(GoalsListDataItem(id: id, title: "Add new button", description: "Press to add new goal"))
+        
         guard let goals = Constants.sharedInstance.UserGoals else {
-//            items.append(GoalsListDataItem(id: id, title: "test", description: "test desc"))
             return items
         }
         

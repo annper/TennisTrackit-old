@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2CC5DA228EC3EFC57197F957 /* Pods_TennisTrackit__Enterprise_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC91EAB0A87E95AFD7836887 /* Pods_TennisTrackit__Enterprise_.framework */; };
-		8401816E1EB9D26B0001CE91 /* GoalsListTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401816D1EB9D26B0001CE91 /* GoalsListTableHeaderView.swift */; };
-		8401816F1EB9D26B0001CE91 /* GoalsListTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401816D1EB9D26B0001CE91 /* GoalsListTableHeaderView.swift */; };
-		840181711EB9D3C50001CE91 /* GoalsListTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840181701EB9D3C50001CE91 /* GoalsListTableHeaderView.xib */; };
-		840181721EB9D3C50001CE91 /* GoalsListTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840181701EB9D3C50001CE91 /* GoalsListTableHeaderView.xib */; };
+		8401816E1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */; };
+		8401816F1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */; };
 		8414617F1E797C8B007D5002 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84839C121E65D08A00751F65 /* Info.plist */; };
 		841461B21E798482007D5002 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461A41E798482007D5002 /* HomeInterfaces.swift */; };
 		841461B31E798482007D5002 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461A41E798482007D5002 /* HomeInterfaces.swift */; };
@@ -81,6 +79,7 @@
 		8431C6A81E7DA70100F47041 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6941E7DA70100F47041 /* MenuViewController.swift */; };
 		8431C6A91E7DA70100F47041 /* MenuWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6961E7DA70100F47041 /* MenuWireframe.swift */; };
 		8431C6AA1E7DA70100F47041 /* MenuWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6961E7DA70100F47041 /* MenuWireframe.swift */; };
+		84603AD21EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84603AD11EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib */; };
 		84839C0E1E65D08A00751F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84839C0D1E65D08A00751F65 /* Assets.xcassets */; };
 		84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84839C0F1E65D08A00751F65 /* LaunchScreen.storyboard */; };
 		84839C1C1E65D08A00751F65 /* TennisTrackitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84839C1B1E65D08A00751F65 /* TennisTrackitTests.swift */; };
@@ -176,8 +175,7 @@
 /* Begin PBXFileReference section */
 		7F87AAEE2EB7D8E056847C19 /* Pods-TennisTrackit [Development].release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisTrackit [Development].release.xcconfig"; path = "Pods/Target Support Files/Pods-TennisTrackit [Development]/Pods-TennisTrackit [Development].release.xcconfig"; sourceTree = "<group>"; };
 		828CECB763F9D9A0CE20356F /* Pods-TennisTrackit [Development].debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisTrackit [Development].debug.xcconfig"; path = "Pods/Target Support Files/Pods-TennisTrackit [Development]/Pods-TennisTrackit [Development].debug.xcconfig"; sourceTree = "<group>"; };
-		8401816D1EB9D26B0001CE91 /* GoalsListTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsListTableHeaderView.swift; sourceTree = "<group>"; };
-		840181701EB9D3C50001CE91 /* GoalsListTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalsListTableHeaderView.xib; sourceTree = "<group>"; };
+		8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsAddNewListTableViewCell.swift; sourceTree = "<group>"; };
 		841461A41E798482007D5002 /* HomeInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
 		841461A51E798482007D5002 /* HomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		841461A71E798482007D5002 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -212,6 +210,7 @@
 		8431C6931E7DA70100F47041 /* MenuListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuListTableViewCell.xib; sourceTree = "<group>"; };
 		8431C6941E7DA70100F47041 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8431C6961E7DA70100F47041 /* MenuWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuWireframe.swift; sourceTree = "<group>"; };
+		84603AD11EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalsAddNewListTableViewCell.xib; sourceTree = "<group>"; };
 		84839C031E65D08A00751F65 /* TennisTrackit [Development].app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TennisTrackit [Development].app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84839C0D1E65D08A00751F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84839C101E65D08A00751F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -396,8 +395,8 @@
 				841C0BD11EB92DB700902D10 /* GoalsListTableViewCell.swift */,
 				841C0BD21EB92DB700902D10 /* GoalsListTableViewCell.xib */,
 				841C0BD31EB92DB700902D10 /* GoalsViewController.swift */,
-				8401816D1EB9D26B0001CE91 /* GoalsListTableHeaderView.swift */,
-				840181701EB9D3C50001CE91 /* GoalsListTableHeaderView.xib */,
+				8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */,
+				84603AD11EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -806,13 +805,13 @@
 				848FFD571E76F30700F1BBF7 /* PagingLoadingView.xib in Resources */,
 				8431C6861E7D86E100F47041 /* rockin_record_g.ttf in Resources */,
 				848FFD471E76F30700F1BBF7 /* EmptyView.xib in Resources */,
-				840181711EB9D3C50001CE91 /* GoalsListTableHeaderView.xib in Resources */,
 				8431C6A51E7DA70100F47041 /* MenuListTableViewCell.xib in Resources */,
 				841461C01E798482007D5002 /* HomeListTableViewCell.xib in Resources */,
 				84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */,
 				84839C0E1E65D08A00751F65 /* Assets.xcassets in Resources */,
 				848FFD5B1E76F30700F1BBF7 /* PagingStaleDataView.xib in Resources */,
 				84B377F71E69AE3000013603 /* environment.plist in Resources */,
+				84603AD21EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,7 +829,6 @@
 				8414617F1E797C8B007D5002 /* Info.plist in Resources */,
 				8431C6871E7D86E100F47041 /* rockin_record_g.ttf in Resources */,
 				848FFD581E76F30700F1BBF7 /* PagingLoadingView.xib in Resources */,
-				840181721EB9D3C50001CE91 /* GoalsListTableHeaderView.xib in Resources */,
 				848FFD481E76F30700F1BBF7 /* EmptyView.xib in Resources */,
 				84839C2B1E65D19200751F65 /* LaunchScreen.storyboard in Resources */,
 				84839C2C1E65D19200751F65 /* Assets.xcassets in Resources */,
@@ -967,7 +965,7 @@
 				841C0BDA1EB92DB700902D10 /* GoalsInteractor.swift in Sources */,
 				84B378071E69B27500013603 /* Appearance.swift in Sources */,
 				84B378171E69B5AF00013603 /* NSObject.swift in Sources */,
-				8401816E1EB9D26B0001CE91 /* GoalsListTableHeaderView.swift in Sources */,
+				8401816E1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */,
 				848FFD691E76F30700F1BBF7 /* CollectionViewDelegate.swift in Sources */,
 				8431C6A11E7DA70100F47041 /* MenuPresenter.swift in Sources */,
 				848FFD6B1E76F30700F1BBF7 /* TableViewController.swift in Sources */,
@@ -1046,7 +1044,7 @@
 				84B378081E69B27500013603 /* Appearance.swift in Sources */,
 				841C0BE71EB92DB700902D10 /* GoalsViewController.swift in Sources */,
 				84B378181E69B5AF00013603 /* NSObject.swift in Sources */,
-				8401816F1EB9D26B0001CE91 /* GoalsListTableHeaderView.swift in Sources */,
+				8401816F1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */,
 				848FFD6A1E76F30700F1BBF7 /* CollectionViewDelegate.swift in Sources */,
 				848FFD6C1E76F30700F1BBF7 /* TableViewController.swift in Sources */,
 				841C0BDD1EB92DB700902D10 /* GoalsListDataItem.swift in Sources */,
