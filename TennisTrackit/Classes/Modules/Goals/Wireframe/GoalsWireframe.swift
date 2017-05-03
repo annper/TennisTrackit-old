@@ -20,7 +20,9 @@ class GoalsWireframe: Wireframe {
     }
     
     func pushNewGoalWith(item: Any?) {
-        // TODO: - push goals details view controller
+        // TODO: - use correct goal item
+        let goalDetailViewController = GoalDetailModule.build()
+        pushViewInNavigationController(viewController: goalDetailViewController, animated: true)
     }
 
 }

@@ -80,6 +80,20 @@
 		8431C6A91E7DA70100F47041 /* MenuWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6961E7DA70100F47041 /* MenuWireframe.swift */; };
 		8431C6AA1E7DA70100F47041 /* MenuWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6961E7DA70100F47041 /* MenuWireframe.swift */; };
 		84603AD21EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84603AD11EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib */; };
+		84603ADF1EBA90BB00F11091 /* GoalDetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD41EBA90BB00F11091 /* GoalDetailInterfaces.swift */; };
+		84603AE01EBA90BB00F11091 /* GoalDetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD41EBA90BB00F11091 /* GoalDetailInterfaces.swift */; };
+		84603AE11EBA90BB00F11091 /* GoalDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD51EBA90BB00F11091 /* GoalDetailModule.swift */; };
+		84603AE21EBA90BB00F11091 /* GoalDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD51EBA90BB00F11091 /* GoalDetailModule.swift */; };
+		84603AE31EBA90BB00F11091 /* GoalDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD71EBA90BB00F11091 /* GoalDetailInteractor.swift */; };
+		84603AE41EBA90BB00F11091 /* GoalDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD71EBA90BB00F11091 /* GoalDetailInteractor.swift */; };
+		84603AE51EBA90BB00F11091 /* GoalDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD91EBA90BB00F11091 /* GoalDetailPresenter.swift */; };
+		84603AE61EBA90BB00F11091 /* GoalDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD91EBA90BB00F11091 /* GoalDetailPresenter.swift */; };
+		84603AE71EBA90BB00F11091 /* GoalDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84603ADB1EBA90BB00F11091 /* GoalDetailView.xib */; };
+		84603AE81EBA90BB00F11091 /* GoalDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84603ADB1EBA90BB00F11091 /* GoalDetailView.xib */; };
+		84603AE91EBA90BB00F11091 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603ADC1EBA90BB00F11091 /* GoalDetailViewController.swift */; };
+		84603AEA1EBA90BB00F11091 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603ADC1EBA90BB00F11091 /* GoalDetailViewController.swift */; };
+		84603AEB1EBA90BB00F11091 /* GoalDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603ADE1EBA90BB00F11091 /* GoalDetailWireframe.swift */; };
+		84603AEC1EBA90BB00F11091 /* GoalDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603ADE1EBA90BB00F11091 /* GoalDetailWireframe.swift */; };
 		84839C0E1E65D08A00751F65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84839C0D1E65D08A00751F65 /* Assets.xcassets */; };
 		84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84839C0F1E65D08A00751F65 /* LaunchScreen.storyboard */; };
 		84839C1C1E65D08A00751F65 /* TennisTrackitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84839C1B1E65D08A00751F65 /* TennisTrackitTests.swift */; };
@@ -211,6 +225,13 @@
 		8431C6941E7DA70100F47041 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8431C6961E7DA70100F47041 /* MenuWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuWireframe.swift; sourceTree = "<group>"; };
 		84603AD11EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalsAddNewListTableViewCell.xib; sourceTree = "<group>"; };
+		84603AD41EBA90BB00F11091 /* GoalDetailInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailInterfaces.swift; sourceTree = "<group>"; };
+		84603AD51EBA90BB00F11091 /* GoalDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailModule.swift; sourceTree = "<group>"; };
+		84603AD71EBA90BB00F11091 /* GoalDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailInteractor.swift; sourceTree = "<group>"; };
+		84603AD91EBA90BB00F11091 /* GoalDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailPresenter.swift; sourceTree = "<group>"; };
+		84603ADB1EBA90BB00F11091 /* GoalDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalDetailView.xib; sourceTree = "<group>"; };
+		84603ADC1EBA90BB00F11091 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
+		84603ADE1EBA90BB00F11091 /* GoalDetailWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailWireframe.swift; sourceTree = "<group>"; };
 		84839C031E65D08A00751F65 /* TennisTrackit [Development].app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TennisTrackit [Development].app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84839C0D1E65D08A00751F65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84839C101E65D08A00751F65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -458,6 +479,52 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
+		84603AD31EBA90BB00F11091 /* GoalDetail */ = {
+			isa = PBXGroup;
+			children = (
+				84603AD41EBA90BB00F11091 /* GoalDetailInterfaces.swift */,
+				84603AD51EBA90BB00F11091 /* GoalDetailModule.swift */,
+				84603AD61EBA90BB00F11091 /* Interactor */,
+				84603AD81EBA90BB00F11091 /* Presenter */,
+				84603ADA1EBA90BB00F11091 /* View */,
+				84603ADD1EBA90BB00F11091 /* Wireframe */,
+			);
+			path = GoalDetail;
+			sourceTree = "<group>";
+		};
+		84603AD61EBA90BB00F11091 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				84603AD71EBA90BB00F11091 /* GoalDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		84603AD81EBA90BB00F11091 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				84603AD91EBA90BB00F11091 /* GoalDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		84603ADA1EBA90BB00F11091 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84603ADB1EBA90BB00F11091 /* GoalDetailView.xib */,
+				84603ADC1EBA90BB00F11091 /* GoalDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84603ADD1EBA90BB00F11091 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				84603ADE1EBA90BB00F11091 /* GoalDetailWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
 		84839BFA1E65D08A00751F65 = {
 			isa = PBXGroup;
 			children = (
@@ -642,6 +709,7 @@
 		84B377FC1E69AEE700013603 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				84603AD31EBA90BB00F11091 /* GoalDetail */,
 				841C0BC71EB92DB700902D10 /* Goals */,
 				8431C6881E7DA70100F47041 /* Menu */,
 				841461A31E798482007D5002 /* Home */,
@@ -805,6 +873,7 @@
 				848FFD571E76F30700F1BBF7 /* PagingLoadingView.xib in Resources */,
 				8431C6861E7D86E100F47041 /* rockin_record_g.ttf in Resources */,
 				848FFD471E76F30700F1BBF7 /* EmptyView.xib in Resources */,
+				84603AE71EBA90BB00F11091 /* GoalDetailView.xib in Resources */,
 				8431C6A51E7DA70100F47041 /* MenuListTableViewCell.xib in Resources */,
 				841461C01E798482007D5002 /* HomeListTableViewCell.xib in Resources */,
 				84839C111E65D08A00751F65 /* LaunchScreen.storyboard in Resources */,
@@ -830,6 +899,7 @@
 				8431C6871E7D86E100F47041 /* rockin_record_g.ttf in Resources */,
 				848FFD581E76F30700F1BBF7 /* PagingLoadingView.xib in Resources */,
 				848FFD481E76F30700F1BBF7 /* EmptyView.xib in Resources */,
+				84603AE81EBA90BB00F11091 /* GoalDetailView.xib in Resources */,
 				84839C2B1E65D19200751F65 /* LaunchScreen.storyboard in Resources */,
 				84839C2C1E65D19200751F65 /* Assets.xcassets in Resources */,
 				841C0BE51EB92DB700902D10 /* GoalsListTableViewCell.xib in Resources */,
@@ -952,6 +1022,7 @@
 				841C0BEB1EB9310D00902D10 /* Constants.swift in Sources */,
 				848FFD531E76F30700F1BBF7 /* PagingCollectionViewController.swift in Sources */,
 				848FFD631E76F30700F1BBF7 /* SectionItemInterfaces.swift in Sources */,
+				84603AEB1EBA90BB00F11091 /* GoalDetailWireframe.swift in Sources */,
 				848FFD5F1E76F30700F1BBF7 /* SectionItemDisplayDataCollection.swift in Sources */,
 				841C0BDE1EB92DB700902D10 /* GoalsListDisplayItem.swift in Sources */,
 				84B377FD1E69AEE700013603 /* AppDelegate.swift in Sources */,
@@ -962,19 +1033,24 @@
 				848FFD451E76F30700F1BBF7 /* EmptyView.swift in Sources */,
 				841461C21E798482007D5002 /* HomeViewController.swift in Sources */,
 				8431C69B1E7DA70100F47041 /* MenuInterfaces.swift in Sources */,
+				84603ADF1EBA90BB00F11091 /* GoalDetailInterfaces.swift in Sources */,
 				841C0BDA1EB92DB700902D10 /* GoalsInteractor.swift in Sources */,
 				84B378071E69B27500013603 /* Appearance.swift in Sources */,
+				84603AE91EBA90BB00F11091 /* GoalDetailViewController.swift in Sources */,
 				84B378171E69B5AF00013603 /* NSObject.swift in Sources */,
 				8401816E1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */,
 				848FFD691E76F30700F1BBF7 /* CollectionViewDelegate.swift in Sources */,
 				8431C6A11E7DA70100F47041 /* MenuPresenter.swift in Sources */,
 				848FFD6B1E76F30700F1BBF7 /* TableViewController.swift in Sources */,
 				841C0BE21EB92DB700902D10 /* GoalsListTableViewCell.swift in Sources */,
+				84603AE11EBA90BB00F11091 /* GoalDetailModule.swift in Sources */,
 				8431C6A31E7DA70100F47041 /* MenuListTableViewCell.swift in Sources */,
+				84603AE31EBA90BB00F11091 /* GoalDetailInteractor.swift in Sources */,
 				848FFD4D1E76F30700F1BBF7 /* PagingInteractor.swift in Sources */,
 				841C0BE61EB92DB700902D10 /* GoalsViewController.swift in Sources */,
 				841461B81E798482007D5002 /* HomeListDataItem.swift in Sources */,
 				841461BE1E798482007D5002 /* HomeListTableViewCell.swift in Sources */,
+				84603AE51EBA90BB00F11091 /* GoalDetailPresenter.swift in Sources */,
 				841461BA1E798482007D5002 /* HomeListDisplayItem.swift in Sources */,
 				84B3780D1E69B27500013603 /* String.swift in Sources */,
 				841C0BF11EB948B300902D10 /* UIApplication.swift in Sources */,
@@ -1031,6 +1107,7 @@
 				84C334571E7980DD0088F561 /* Paginator.swift in Sources */,
 				848FFD541E76F30700F1BBF7 /* PagingCollectionViewController.swift in Sources */,
 				848FFD641E76F30700F1BBF7 /* SectionItemInterfaces.swift in Sources */,
+				84603AEC1EBA90BB00F11091 /* GoalDetailWireframe.swift in Sources */,
 				8431C6A21E7DA70100F47041 /* MenuPresenter.swift in Sources */,
 				848FFD601E76F30700F1BBF7 /* SectionItemDisplayDataCollection.swift in Sources */,
 				84B377FE1E69AEE700013603 /* AppDelegate.swift in Sources */,
@@ -1041,19 +1118,24 @@
 				841C0BEF1EB9363800902D10 /* Color.swift in Sources */,
 				848FFD461E76F30700F1BBF7 /* EmptyView.swift in Sources */,
 				841461C31E798482007D5002 /* HomeViewController.swift in Sources */,
+				84603AE01EBA90BB00F11091 /* GoalDetailInterfaces.swift in Sources */,
 				84B378081E69B27500013603 /* Appearance.swift in Sources */,
 				841C0BE71EB92DB700902D10 /* GoalsViewController.swift in Sources */,
+				84603AEA1EBA90BB00F11091 /* GoalDetailViewController.swift in Sources */,
 				84B378181E69B5AF00013603 /* NSObject.swift in Sources */,
 				8401816F1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */,
 				848FFD6A1E76F30700F1BBF7 /* CollectionViewDelegate.swift in Sources */,
 				848FFD6C1E76F30700F1BBF7 /* TableViewController.swift in Sources */,
 				841C0BDD1EB92DB700902D10 /* GoalsListDataItem.swift in Sources */,
 				841C0BE91EB92DB700902D10 /* GoalsWireframe.swift in Sources */,
+				84603AE21EBA90BB00F11091 /* GoalDetailModule.swift in Sources */,
 				848FFD4E1E76F30700F1BBF7 /* PagingInteractor.swift in Sources */,
+				84603AE41EBA90BB00F11091 /* GoalDetailInteractor.swift in Sources */,
 				841461B91E798482007D5002 /* HomeListDataItem.swift in Sources */,
 				8431C69A1E7DA70100F47041 /* MenuListDataItem.swift in Sources */,
 				841461BF1E798482007D5002 /* HomeListTableViewCell.swift in Sources */,
 				841461BB1E798482007D5002 /* HomeListDisplayItem.swift in Sources */,
+				84603AE61EBA90BB00F11091 /* GoalDetailPresenter.swift in Sources */,
 				84B3780E1E69B27500013603 /* String.swift in Sources */,
 				841C0BE31EB92DB700902D10 /* GoalsListTableViewCell.swift in Sources */,
 				841C0BF21EB948B300902D10 /* UIApplication.swift in Sources */,
