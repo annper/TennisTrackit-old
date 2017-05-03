@@ -18,5 +18,9 @@ class GoalsWireframe: Wireframe {
         let menuViewController = MenuModule.build()
         pushViewInNavigationController(viewController: menuViewController, animated: true)
     }
+    
+    func pushNewGoalWith(item: Any?) {
+        // TODO: - push goals details view controller
+    }
 
 }

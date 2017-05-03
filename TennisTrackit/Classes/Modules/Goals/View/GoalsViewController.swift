@@ -20,7 +20,8 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         temp.setupCellWithObjectForIndexPath = { (cell, object, indexPath) ->
             Void in
             if indexPath.row == 0 {
-                _ = cell as! GoalsAddNewListTableViewCell
+                let cell = cell as! GoalsAddNewListTableViewCell
+                self.setupAddNewButton(cell: cell)
             } else {
                 let cell = cell as! GoalsListTableViewCell
                 cell.setupWith(display: object)
@@ -35,8 +36,7 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         
         temp.didSelectRowAtIndexPath = { [weak self] (indexPath, object) in
 			guard let strongSelf = self else { return }
-			// strongSelf.eventHandler.didBlah(..)
-            print("Selected row: \(indexPath.row) in section: \(indexPath.section)")
+            strongSelf.eventHandler.openGoalDetailWith(item: object)
         }
         
         return temp
@@ -52,10 +52,20 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func setupAddNewButton(cell: GoalsAddNewListTableViewCell) {
+        cell.addNewButton.addTarget(self, action: #selector(GoalsViewController.didTapAddNewButton) , for: .touchUpInside)
+    }
+    
+    @objc private func didTapAddNewButton() {
+        print("did tap add new")
+        eventHandler.openGoalDetailWith(item: nil)
+    }
+        
     override func setupTableView() {
         super.setupTableView()
         
         // configure table view
+        tableView.backgroundColor = Color.homeOlive()
         tableView.register(GoalsListTableViewCell.nib(), forCellReuseIdentifier: GoalsListTableViewCell.reuseIdentifier())
         tableView.register(GoalsAddNewListTableViewCell.nib(), forCellReuseIdentifier: GoalsAddNewListTableViewCell.reuseIdentifier())
         
