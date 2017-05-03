@@ -29,7 +29,7 @@ class MenuViewController: TableViewController<MenuListDisplayItem>, MenuViewInpu
         
         temp.didSelectRowAtIndexPath = { [weak self] (indexPath, object) in
 			guard let strongSelf = self else { return }
-			// strongSelf.eventHandler.didBlah(..)
+			 strongSelf.eventHandler.rowTappedWith(id: indexPath.row)
             print("Selected row: \(indexPath.row) in section: \(indexPath.section)")
         }
         

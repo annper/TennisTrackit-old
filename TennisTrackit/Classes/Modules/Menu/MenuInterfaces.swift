@@ -10,6 +10,7 @@
 
 protocol MenuViewOutput: class {
     func viewWillAppear(animated: Bool)
+    func rowTappedWith(id: Int)
 }
 
 protocol MenuViewInput: class, SectionItemViewInput {

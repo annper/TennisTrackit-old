@@ -28,6 +28,19 @@ class MenuPresenter: SectionItemPresenter<MenuListDisplayItem>, MenuViewOutput, 
         updateSectionItemUserInterface(userInterface: userInterface, reloadData: false)
     }
     
+    func rowTappedWith(id: Int) {
+        switch id {
+        case 0:
+            // Home module
+            wireframe.showHomeModule()
+        case 1:
+            // Goals module
+            wireframe.showGoalsModule()
+        default: break
+            // Nothing
+        }
+    }
+    
     // MARK: - SectionItemPresenter
     
     override func displayDataItems() -> [MenuListDisplayItem]? {

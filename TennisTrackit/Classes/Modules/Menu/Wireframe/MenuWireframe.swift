@@ -14,11 +14,29 @@ class MenuWireframe: Wireframe {
     
     // MARK: - MenuWireframe
     
-	/*
-	// Example code: how to create and present a module
-    func presentHelpModule() {
-        let helpModule = HelpModule.build()
-        presentViewInNavigationController(helpModule, animated: true)
+    func showHomeModule() {
+         _ = viewController.navigationController?.popToRootViewController(animated: true)
     }
-	*/
+    
+    func showGoalsModule() {
+        // Pop or push controller based on the order of screens in the navigation stack
+        if (previousViewController()?.isKind(of: GoalsViewController.self))! {
+            _ = viewController.navigationController?.popViewController(animated: true)
+            return
+        }
+
+        let goalsViewController = GoalsModule.build()
+        pushViewInNavigationController(viewController: goalsViewController, animated: true)
+
+    }
+    
+    private func previousViewController() -> UIViewController? {
+        if let viewControllers = viewController.navigationController?.viewControllers {
+            if viewControllers.count >= 2 {
+                return viewControllers[viewControllers.count - 2]
+            }
+        }
+        
+        return nil
+    }
 }
