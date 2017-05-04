@@ -10,6 +10,8 @@
 		2CC5DA228EC3EFC57197F957 /* Pods_TennisTrackit__Enterprise_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC91EAB0A87E95AFD7836887 /* Pods_TennisTrackit__Enterprise_.framework */; };
 		8401816E1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */; };
 		8401816F1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */; };
+		84084A941EBB92EC0063FA5C /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84084A931EBB92EC0063FA5C /* CheckboxButton.swift */; };
+		84084A951EBB92EC0063FA5C /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84084A931EBB92EC0063FA5C /* CheckboxButton.swift */; };
 		8414617F1E797C8B007D5002 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84839C121E65D08A00751F65 /* Info.plist */; };
 		841461B21E798482007D5002 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461A41E798482007D5002 /* HomeInterfaces.swift */; };
 		841461B31E798482007D5002 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461A41E798482007D5002 /* HomeInterfaces.swift */; };
@@ -192,6 +194,7 @@
 		7F87AAEE2EB7D8E056847C19 /* Pods-TennisTrackit [Development].release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisTrackit [Development].release.xcconfig"; path = "Pods/Target Support Files/Pods-TennisTrackit [Development]/Pods-TennisTrackit [Development].release.xcconfig"; sourceTree = "<group>"; };
 		828CECB763F9D9A0CE20356F /* Pods-TennisTrackit [Development].debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisTrackit [Development].debug.xcconfig"; path = "Pods/Target Support Files/Pods-TennisTrackit [Development]/Pods-TennisTrackit [Development].debug.xcconfig"; sourceTree = "<group>"; };
 		8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsAddNewListTableViewCell.swift; sourceTree = "<group>"; };
+		84084A931EBB92EC0063FA5C /* CheckboxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		841461A41E798482007D5002 /* HomeInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
 		841461A51E798482007D5002 /* HomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		841461A71E798482007D5002 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -755,6 +758,7 @@
 		84B378011E69AFAC00013603 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84084A931EBB92EC0063FA5C /* CheckboxButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1072,6 +1076,7 @@
 				848FFD491E76F30700F1BBF7 /* ViewController.swift in Sources */,
 				848FFD651E76F30700F1BBF7 /* CollectionViewController.swift in Sources */,
 				848FFD4F1E76F30700F1BBF7 /* PagingInterfaces.swift in Sources */,
+				84084A941EBB92EC0063FA5C /* CheckboxButton.swift in Sources */,
 				848FFD671E76F30700F1BBF7 /* CollectionViewDataSource.swift in Sources */,
 				84B3781B1E69B5AF00013603 /* UITableView.swift in Sources */,
 				841C0BDC1EB92DB700902D10 /* GoalsListDataItem.swift in Sources */,
@@ -1158,6 +1163,7 @@
 				848FFD661E76F30700F1BBF7 /* CollectionViewController.swift in Sources */,
 				848FFD501E76F30700F1BBF7 /* PagingInterfaces.swift in Sources */,
 				841C0BDB1EB92DB700902D10 /* GoalsInteractor.swift in Sources */,
+				84084A951EBB92EC0063FA5C /* CheckboxButton.swift in Sources */,
 				848FFD681E76F30700F1BBF7 /* CollectionViewDataSource.swift in Sources */,
 				8431C6A01E7DA70100F47041 /* MenuListDisplayItem.swift in Sources */,
 				84B3781C1E69B5AF00013603 /* UITableView.swift in Sources */,
