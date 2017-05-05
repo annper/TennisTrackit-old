@@ -22,6 +22,15 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         }
     }
     
+    @IBOutlet var subtasksView: UIView!
+    
+    @IBOutlet var addSubtaskButton: UIButton! {
+        didSet {
+            addSubtaskButton.setTitle("+ Add subtask", for: .normal)
+            addSubtaskButton.setTitleColor(Color.homeDarkOlive(), for: .normal)
+        }
+    }
+    
     @IBOutlet var titleLabel: UILabel! {
         didSet {
             titleLabel.text = "Tap to add title"
@@ -63,6 +72,9 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     }
     
     // MARK: - ViewController
+    
+    @IBAction func didTapAddSubtaskButton(_ sender: UIButton) {
+    }
 
     override func setupNavigationBar() {
         super.setupNavigationBar()
