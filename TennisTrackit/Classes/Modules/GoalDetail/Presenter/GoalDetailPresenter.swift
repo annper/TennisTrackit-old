@@ -24,10 +24,26 @@ class GoalDetailPresenter: GoalDetailViewOutput, GoalDetailInteractorOutput {
         self.userInterface = userInterface
     }
     
+    private func goalDisplayItemWith(goalDetailItem: GoalDetailDataItem?) -> GoalDetailDisplayDataItem? {
+        
+        guard let goal = goalDetailItem else {
+            return nil
+        }
+        
+        var tagsString: String?
+        
+        if let tags = goal.tags, tags.count > 0 {
+            tagsString = "#" + tags.joined(separator: " #")
+        }
+        
+        return GoalDetailDisplayDataItem(title: goal.title, description: goal.description, done: goal.done, tags: tagsString)
+    }
+    
     // MARK: - GoalDetailViewOutput
 
     func viewDidLoad() {
-        userInterface.setupView(goal: goalDetailDataItem)
+        let goalDisplayItem = goalDisplayItemWith(goalDetailItem: goalDetailDataItem)
+        userInterface.setupView(goal: goalDisplayItem)
     }
     
     func viewWillAppear(animated: Bool) {

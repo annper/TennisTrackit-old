@@ -12,6 +12,8 @@
 		8401816F1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */; };
 		84084A941EBB92EC0063FA5C /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84084A931EBB92EC0063FA5C /* CheckboxButton.swift */; };
 		84084A951EBB92EC0063FA5C /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84084A931EBB92EC0063FA5C /* CheckboxButton.swift */; };
+		84084A971EBC80A60063FA5C /* GoalDetailDisplayDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84084A961EBC80A60063FA5C /* GoalDetailDisplayDataItem.swift */; };
+		84084A981EBC80A60063FA5C /* GoalDetailDisplayDataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84084A961EBC80A60063FA5C /* GoalDetailDisplayDataItem.swift */; };
 		8414617F1E797C8B007D5002 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84839C121E65D08A00751F65 /* Info.plist */; };
 		841461B21E798482007D5002 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461A41E798482007D5002 /* HomeInterfaces.swift */; };
 		841461B31E798482007D5002 /* HomeInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841461A41E798482007D5002 /* HomeInterfaces.swift */; };
@@ -195,6 +197,7 @@
 		828CECB763F9D9A0CE20356F /* Pods-TennisTrackit [Development].debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TennisTrackit [Development].debug.xcconfig"; path = "Pods/Target Support Files/Pods-TennisTrackit [Development]/Pods-TennisTrackit [Development].debug.xcconfig"; sourceTree = "<group>"; };
 		8401816D1EB9D26B0001CE91 /* GoalsAddNewListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsAddNewListTableViewCell.swift; sourceTree = "<group>"; };
 		84084A931EBB92EC0063FA5C /* CheckboxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
+		84084A961EBC80A60063FA5C /* GoalDetailDisplayDataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailDisplayDataItem.swift; sourceTree = "<group>"; };
 		841461A41E798482007D5002 /* HomeInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInterfaces.swift; sourceTree = "<group>"; };
 		841461A51E798482007D5002 /* HomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
 		841461A71E798482007D5002 /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -511,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				84603AD91EBA90BB00F11091 /* GoalDetailPresenter.swift */,
+				84084A961EBC80A60063FA5C /* GoalDetailDisplayDataItem.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1039,6 +1043,7 @@
 				848FFD5D1E76F30700F1BBF7 /* PagingTableViewController.swift in Sources */,
 				841C0BD61EB92DB700902D10 /* GoalsInterfaces.swift in Sources */,
 				848FFD451E76F30700F1BBF7 /* EmptyView.swift in Sources */,
+				84084A971EBC80A60063FA5C /* GoalDetailDisplayDataItem.swift in Sources */,
 				841461C21E798482007D5002 /* HomeViewController.swift in Sources */,
 				84603AEE1EBA924900F11091 /* GoalDetailDataItem.swift in Sources */,
 				8431C69B1E7DA70100F47041 /* MenuInterfaces.swift in Sources */,
@@ -1126,6 +1131,7 @@
 				8431C6AA1E7DA70100F47041 /* MenuWireframe.swift in Sources */,
 				848FFD5E1E76F30700F1BBF7 /* PagingTableViewController.swift in Sources */,
 				841C0BEF1EB9363800902D10 /* Color.swift in Sources */,
+				84084A981EBC80A60063FA5C /* GoalDetailDisplayDataItem.swift in Sources */,
 				848FFD461E76F30700F1BBF7 /* EmptyView.swift in Sources */,
 				84603AEF1EBA924900F11091 /* GoalDetailDataItem.swift in Sources */,
 				841461C31E798482007D5002 /* HomeViewController.swift in Sources */,

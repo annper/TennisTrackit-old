@@ -38,6 +38,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             titleLabel.text = "Tap to add title".localized()
             titleLabel.textColor = UIColor.gray
             titleLabel.font = Font.mediumFontWithSketchSize(size: Font.size16)
+            titleLabel.isUserInteractionEnabled = true
         }
     }
     
@@ -47,6 +48,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             descLabel.textColor = UIColor.gray
             descLabel.font = Font.lightFontWithSketchSize(size: Font.size16)
             descLabel.numberOfLines = 15
+            descLabel.isUserInteractionEnabled = true
         }
     }
     
@@ -70,11 +72,12 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             tagsLabel.numberOfLines = 0
             tagsLabel.font = Font.lightFontWithSketchSize(size: Font.size14)
             tagsLabel.textColor = UIColor.lightGray
+            tagsLabel.isUserInteractionEnabled = true
         }
     }
     
     // MARK: - ViewController
-    
+
     @IBAction func didTapAddSubtaskButton(_ sender: UIButton) {
         // TODO: - Add subtask
     }
@@ -83,6 +86,10 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         // TODO: - Set goal as done
     }
     
+    @objc private func didTapLabel(label: UILabel) {
+        // TODO: - Change to textfield
+        
+    }
     
     override func setupNavigationBar() {
         super.setupNavigationBar()
@@ -92,7 +99,10 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     }
     
     override func setupView() {
-        
+        let tappedLabelGesture = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(label:)))
+        titleLabel.addGestureRecognizer(tappedLabelGesture)
+        descLabel.addGestureRecognizer(tappedLabelGesture)
+        tagsLabel.addGestureRecognizer(tappedLabelGesture)
     }
     
     // MARK: - UIViewController
@@ -113,10 +123,22 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     
     // MARK: - GoalDetailViewInput
     
-    func setupView(goal: GoalDetailDataItem?) {
+    func setupView(goal: GoalDetailDisplayDataItem?) {
         
+        // TODO: - Setup subtasks
+
         if let goal = goal {
             navigationItem.title = goal.title
+            titleLabel.text = goal.title
+            doneButton.isChecked = goal.done
+            
+            if nil != goal.description {
+                descLabel.text = goal.description
+            }
+            
+            if nil != goal.tags {
+                tagsLabel.text = goal.tags!
+            }
         } else {
             navigationItem.title = "New goal".localized()
         }

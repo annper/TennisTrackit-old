@@ -13,5 +13,6 @@ class GoalDetailInteractor: GoalDetailInteractorInput {
     weak var presenter: GoalDetailInteractorOutput!
     
     // MARK: - GoalDetailInteractorInput
+    
 
 }

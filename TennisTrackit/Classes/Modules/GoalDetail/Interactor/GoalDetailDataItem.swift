@@ -13,7 +13,7 @@ struct GoalDetailDataItem {
     var description: String?
     var done: Bool
     var subtasks: [SubtaskDataItem]?
-    var tags: [String]
+    var tags: [String]?
 }
 
 struct SubtaskDataItem {
