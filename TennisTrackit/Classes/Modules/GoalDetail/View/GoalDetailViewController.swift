@@ -39,6 +39,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             titleLabel.textColor = UIColor.gray
             titleLabel.font = Font.mediumFontWithSketchSize(size: Font.size16)
             titleLabel.isUserInteractionEnabled = true
+            titleLabel.tag = 1
         }
     }
     
@@ -49,6 +50,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             descLabel.font = Font.lightFontWithSketchSize(size: Font.size16)
             descLabel.numberOfLines = 15
             descLabel.isUserInteractionEnabled = true
+            descLabel.tag = 2
         }
     }
     
@@ -73,6 +75,30 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             tagsLabel.font = Font.lightFontWithSketchSize(size: Font.size14)
             tagsLabel.textColor = UIColor.lightGray
             tagsLabel.isUserInteractionEnabled = true
+            tagsLabel.tag = 3
+        }
+    }
+    
+    // MARK: - Editable fields
+    
+    @IBOutlet var titleTextField: UITextField! {
+        didSet {
+            titleTextField.isHidden = true
+            titleTextField.placeholder = "Add description".localized()
+        }
+    }
+    
+    @IBOutlet var descTextView: UITextView! {
+        didSet {
+            descTextView.isHidden = true
+            descTextView.text = ""
+        }
+    }
+    
+    @IBOutlet var tagsTextView: UITextView! {
+        didSet {
+            tagsTextView.isHidden = true
+            tagsTextView.text = ""
         }
     }
     
@@ -93,7 +119,32 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
                 return
             }
             print(tappedLabel.text)
-            // TODO: - Change to textfield
+            
+            switch tappedLabel.tag {
+            case 1: // title
+                titleLabel.isHidden = true
+                descLabel.isHidden = false
+                tagsLabel.isHidden = false
+                titleTextField.isHidden = false
+                descTextView.isHidden = true
+                tagsTextView.isHidden = true
+            case 2: // description
+                titleLabel.isHidden = false
+                descLabel.isHidden = true
+                tagsLabel.isHidden = false
+                titleTextField.isHidden = true
+                descTextView.isHidden = false
+            case 3: // tags
+                titleLabel.isHidden = false
+                descLabel.isHidden = false
+                tagsLabel.isHidden = true
+                titleTextField.isHidden = true
+                descLabel.isHidden = true
+                tagsTextView.isHidden = false
+            default: return
+            }
+            
+//            switch tappedLabel.tag
         }
         
     }
@@ -141,14 +192,17 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         if let goal = goal {
             navigationItem.title = goal.title
             titleLabel.text = goal.title
+            titleTextField.text = goal.title
             doneButton.isChecked = goal.done
             
             if nil != goal.description {
-                descLabel.text = goal.description
+                descLabel.text = goal.description!
+                descTextView.text = goal.description!
             }
             
             if nil != goal.tags {
                 tagsLabel.text = goal.tags!
+                tagsTextView.text = goal.tags!
             }
         } else {
             navigationItem.title = "New goal".localized()

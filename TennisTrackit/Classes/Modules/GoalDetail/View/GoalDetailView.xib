@@ -13,12 +13,15 @@
                 <outlet property="addSubtaskButton" destination="aHr-C6-mRn" id="J2W-sE-aRh"/>
                 <outlet property="contentViewWidthConstraint" destination="8wF-tv-0Qo" id="js5-e4-AjZ"/>
                 <outlet property="descLabel" destination="gWt-Ib-rHQ" id="2Ws-sl-nej"/>
+                <outlet property="descTextView" destination="cBH-9L-asC" id="E6T-YZ-mDU"/>
                 <outlet property="doneButton" destination="3rl-aT-sia" id="bdf-IL-DY8"/>
                 <outlet property="secondSeparatorView" destination="gbF-nt-DHW" id="eMm-6X-7QY"/>
                 <outlet property="separatorView" destination="tgX-95-z1X" id="5Fb-ij-9xb"/>
                 <outlet property="subtasksView" destination="UpB-6v-1Wl" id="Jq8-Zc-DPc"/>
                 <outlet property="tagsLabel" destination="vjF-QV-ZbZ" id="dNd-bI-WPB"/>
+                <outlet property="tagsTextView" destination="jXZ-Vl-5IC" id="Obd-vB-y5O"/>
                 <outlet property="titleLabel" destination="1fW-nm-XU5" id="Vvv-OO-SoU"/>
+                <outlet property="titleTextField" destination="i2c-Sp-Y6g" id="5yU-hP-aFN"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kgh-GT-vho"/>
             </connections>
         </placeholder>
@@ -45,9 +48,8 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cBH-9L-asC">
+                                <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cBH-9L-asC">
                                     <rect key="frame" x="25" y="60" width="325" height="11.5"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -132,12 +134,16 @@
                                 <constraint firstItem="UpB-6v-1Wl" firstAttribute="top" secondItem="tgX-95-z1X" secondAttribute="bottom" constant="12" id="LZK-Y9-yNu"/>
                                 <constraint firstItem="i2c-Sp-Y6g" firstAttribute="leading" secondItem="6Ju-wU-2Mz" secondAttribute="leading" constant="25" id="MAo-vG-xxU"/>
                                 <constraint firstAttribute="trailing" secondItem="gbF-nt-DHW" secondAttribute="trailing" constant="8" id="PtS-gB-hoG"/>
+                                <constraint firstAttribute="trailing" secondItem="cBH-9L-asC" secondAttribute="trailing" constant="25" id="QFJ-kq-8H8"/>
                                 <constraint firstItem="3rl-aT-sia" firstAttribute="leading" secondItem="i2c-Sp-Y6g" secondAttribute="trailing" constant="10" id="QfN-ki-tnf"/>
+                                <constraint firstItem="cBH-9L-asC" firstAttribute="leading" secondItem="6Ju-wU-2Mz" secondAttribute="leading" constant="25" id="RIN-I4-uzX"/>
                                 <constraint firstItem="vjF-QV-ZbZ" firstAttribute="top" secondItem="gbF-nt-DHW" secondAttribute="bottom" constant="12" id="TZC-E0-cIz"/>
                                 <constraint firstAttribute="trailing" secondItem="3rl-aT-sia" secondAttribute="trailing" constant="25" id="V57-b4-NPj"/>
+                                <constraint firstItem="cBH-9L-asC" firstAttribute="top" secondItem="3rl-aT-sia" secondAttribute="bottom" constant="10" id="X2M-OX-X4u"/>
                                 <constraint firstItem="1fW-nm-XU5" firstAttribute="leading" secondItem="6Ju-wU-2Mz" secondAttribute="leading" constant="25" id="YvN-hV-jMG"/>
                                 <constraint firstItem="aHr-C6-mRn" firstAttribute="leading" secondItem="6Ju-wU-2Mz" secondAttribute="leading" constant="25" id="b2W-7I-zGt"/>
                                 <constraint firstItem="gbF-nt-DHW" firstAttribute="top" secondItem="aHr-C6-mRn" secondAttribute="bottom" constant="12" id="b4e-O6-Vyc"/>
+                                <constraint firstItem="tgX-95-z1X" firstAttribute="top" secondItem="cBH-9L-asC" secondAttribute="bottom" constant="12" id="g5i-dx-Yry"/>
                                 <constraint firstItem="i2c-Sp-Y6g" firstAttribute="top" secondItem="6Ju-wU-2Mz" secondAttribute="top" constant="20" id="hbB-Dd-U77"/>
                                 <constraint firstItem="vjF-QV-ZbZ" firstAttribute="leading" secondItem="6Ju-wU-2Mz" secondAttribute="leading" constant="25" id="imk-w3-gzm"/>
                                 <constraint firstItem="UpB-6v-1Wl" firstAttribute="leading" secondItem="6Ju-wU-2Mz" secondAttribute="leading" constant="25" id="jTa-qe-jQV"/>
