@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cartography
 
 class GoalDetailViewController: ViewController, GoalDetailViewInput {
     
@@ -81,10 +82,15 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     
     // MARK: - Editable fields
     
+    @IBOutlet var descTextViewHeightConstraint: NSLayoutConstraint!
+    
+    
     @IBOutlet var titleTextField: UITextField! {
         didSet {
             titleTextField.isHidden = true
             titleTextField.placeholder = "Add description".localized()
+            titleTextField.textColor = UIColor.gray
+            titleTextField.font = Font.mediumFontWithSketchSize(size: Font.size16)
         }
     }
     
@@ -92,6 +98,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         didSet {
             descTextView.isHidden = true
             descTextView.text = ""
+            descTextView.textColor = UIColor.gray
+            descTextView.font = Font.lightFontWithSketchSize(size: Font.size16)
         }
     }
     
@@ -100,6 +108,27 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             tagsTextView.isHidden = true
             tagsTextView.text = ""
         }
+    }
+    
+    private func updateView(textInput: AnyObject) {
+        var updatedText = ""
+        
+        if textInput is UITextField || textInput is UITextView {
+            if textInput.text.length > 0 {
+                updatedText = textInput.text!
+            }
+        }
+        
+        switch textInput.tag {
+        case 1: // title
+            titleLabel.text = updatedText
+        case 2: // desc
+            descLabel.text = updatedText
+        case 3: // tags
+            tagsLabel.text = updatedText
+        default: break
+        }
+        
     }
     
     // MARK: - ViewController
@@ -129,22 +158,18 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
                 descTextView.isHidden = true
                 tagsTextView.isHidden = true
             case 2: // description
-                titleLabel.isHidden = false
-                descLabel.isHidden = true
-                tagsLabel.isHidden = false
-                titleTextField.isHidden = true
-                descTextView.isHidden = false
+                displayEditableDescription()
             case 3: // tags
                 titleLabel.isHidden = false
                 descLabel.isHidden = false
                 tagsLabel.isHidden = true
+                
                 titleTextField.isHidden = true
-                descLabel.isHidden = true
+                descTextView.isHidden = true
                 tagsTextView.isHidden = false
             default: return
             }
             
-//            switch tappedLabel.tag
         }
         
     }
@@ -183,6 +208,17 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         eventHandler.openMenu()
     }
     
+    private func displayEditableDescription() {
+        titleLabel.isHidden = false
+        descLabel.isHidden = true
+        tagsLabel.isHidden = false
+        
+        titleTextField.isHidden = true
+        descTextView.isHidden = false
+        tagsTextView.isHidden = true
+
+    }
+    
     // MARK: - GoalDetailViewInput
     
     func setupView(goal: GoalDetailDisplayDataItem?) {
@@ -208,6 +244,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             navigationItem.title = "New goal".localized()
         }
         
+        
+        // TODO: - Calculate height of desc label. desc text view will always be equal or smaller in size
     }
 
 }
