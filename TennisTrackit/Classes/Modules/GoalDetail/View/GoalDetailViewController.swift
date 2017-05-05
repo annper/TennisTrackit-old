@@ -8,8 +8,9 @@
 
 import UIKit
 import Cartography
+import TPKeyboardAvoiding
 
-class GoalDetailViewController: ViewController, GoalDetailViewInput {
+class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextFieldDelegate, UITextViewDelegate {
     
     var eventHandler: GoalDetailViewOutput!
     
@@ -91,6 +92,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             titleTextField.placeholder = "Add description".localized()
             titleTextField.textColor = UIColor.gray
             titleTextField.font = Font.mediumFontWithSketchSize(size: Font.size16)
+            titleTextField.delegate = self
+            titleTextField.tag = 4
         }
     }
     
@@ -100,6 +103,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             descTextView.text = ""
             descTextView.textColor = UIColor.gray
             descTextView.font = Font.lightFontWithSketchSize(size: Font.size16)
+            descTextView.delegate = self
+            descTextView.tag = 5
         }
     }
     
@@ -107,28 +112,37 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         didSet {
             tagsTextView.isHidden = true
             tagsTextView.text = ""
+            tagsTextView.textColor = UIColor.lightGray
+            tagsTextView.font = Font.lightFontWithSketchSize(size: Font.size14)
+            tagsTextView.delegate = self
+            tagsTextView.tag = 6
         }
     }
     
-    private func updateView(textInput: AnyObject) {
-        var updatedText = ""
-        
-        if textInput is UITextField || textInput is UITextView {
-            if textInput.text.length > 0 {
-                updatedText = textInput.text!
-            }
-        }
-        
+    private func updateView(textInput: UIView) {
         switch textInput.tag {
-        case 1: // title
-            titleLabel.text = updatedText
-        case 2: // desc
-            descLabel.text = updatedText
-        case 3: // tags
-            tagsLabel.text = updatedText
+        case 4:
+            let input = textInput as! UITextField
+            titleLabel.text = input.text!
+        case 5:
+            let input = textInput as! UITextView
+            descLabel.text = input.text!
+        case 6:
+            let input = textInput as! UITextView
+            tagsLabel.text = input.text!
         default: break
         }
         
+    }
+    
+    private func resetEditMode() {
+        titleLabel.isHidden = false
+        descLabel.isHidden = false
+        tagsLabel.isHidden = false
+        
+        titleTextField.isHidden = true
+        descTextView.isHidden = true
+        tagsTextView.isHidden = true
     }
     
     // MARK: - ViewController
@@ -149,23 +163,18 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
             }
             print(tappedLabel.text)
             
+            resetEditMode()
+            
             switch tappedLabel.tag {
             case 1: // title
                 titleLabel.isHidden = true
-                descLabel.isHidden = false
-                tagsLabel.isHidden = false
                 titleTextField.isHidden = false
-                descTextView.isHidden = true
-                tagsTextView.isHidden = true
             case 2: // description
+                descLabel.isHidden = true
+                descTextView.isHidden = false
                 displayEditableDescription()
             case 3: // tags
-                titleLabel.isHidden = false
-                descLabel.isHidden = false
                 tagsLabel.isHidden = true
-                
-                titleTextField.isHidden = true
-                descTextView.isHidden = true
                 tagsTextView.isHidden = false
             default: return
             }
@@ -209,14 +218,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     }
     
     private func displayEditableDescription() {
-        titleLabel.isHidden = false
-        descLabel.isHidden = true
-        tagsLabel.isHidden = false
-        
-        titleTextField.isHidden = true
-        descTextView.isHidden = false
-        tagsTextView.isHidden = true
-
+        // TODO: - Resize description view
     }
     
     // MARK: - GoalDetailViewInput
@@ -246,6 +248,34 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         
         
         // TODO: - Calculate height of desc label. desc text view will always be equal or smaller in size
+    }
+    
+    // MARK: UITextViewDelegate
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        updateView(textInput: textView)
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            resetEditMode()
+            textView.resignFirstResponder()
+            return false
+        }
+        
+        return true
+    }
+    
+    // MARK: UITextFieldDelegate
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateView(textInput: textField)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        resetEditMode()
+        textField.resignFirstResponder()
+        return true
     }
 
 }

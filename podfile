@@ -18,6 +18,7 @@ def all_pods
     pod 'SwiftyJSON'
     pod 'Alamofire', '~> 4.4'
     pod 'SwiftyTimer'
+    pod 'TPKeyboardAvoiding'
     
     source 'https://github.com/CocoaPods/Specs.git'
     pod 'Localize-Swift', '~> 1.7'
