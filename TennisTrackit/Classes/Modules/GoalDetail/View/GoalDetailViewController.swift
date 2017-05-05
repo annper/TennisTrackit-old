@@ -86,8 +86,15 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         // TODO: - Set goal as done
     }
     
-    @objc private func didTapLabel(label: UILabel) {
-        // TODO: - Change to textfield
+    @objc private func didTapLabel(sender: UITapGestureRecognizer) {
+        
+        if sender.state == .ended {
+            guard let tappedLabel = sender.view as? UILabel else {
+                return
+            }
+            print(tappedLabel.text)
+            // TODO: - Change to textfield
+        }
         
     }
     
@@ -99,10 +106,14 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     }
     
     override func setupView() {
-        let tappedLabelGesture = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(label:)))
-        titleLabel.addGestureRecognizer(tappedLabelGesture)
-        descLabel.addGestureRecognizer(tappedLabelGesture)
-        tagsLabel.addGestureRecognizer(tappedLabelGesture)
+        let titleGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(sender:)))
+        titleLabel.addGestureRecognizer(titleGestureRecogniser)
+        
+        let descGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(sender:)))
+        descLabel.addGestureRecognizer(descGestureRecogniser)
+        
+        let tagsGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(sender:)))
+        tagsLabel.addGestureRecognizer(tagsGestureRecogniser)
     }
     
     // MARK: - UIViewController
