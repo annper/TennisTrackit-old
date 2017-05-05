@@ -26,14 +26,16 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     
     @IBOutlet var addSubtaskButton: UIButton! {
         didSet {
-            addSubtaskButton.setTitle("+ Add subtask", for: .normal)
+            addSubtaskButton.setTitle("+ Add subtask".localized(), for: .normal)
             addSubtaskButton.setTitleColor(Color.homeDarkOlive(), for: .normal)
         }
     }
     
+    @IBOutlet var doneButton: CheckboxButton!
+    
     @IBOutlet var titleLabel: UILabel! {
         didSet {
-            titleLabel.text = "Tap to add title"
+            titleLabel.text = "Tap to add title".localized()
             titleLabel.textColor = UIColor.gray
             titleLabel.font = Font.mediumFontWithSketchSize(size: Font.size16)
         }
@@ -41,7 +43,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     
     @IBOutlet var descLabel: UILabel! {
         didSet {
-            descLabel.text = "Tap to add description"
+            descLabel.text = "Tap to add description".localized()
             descLabel.textColor = UIColor.gray
             descLabel.font = Font.lightFontWithSketchSize(size: Font.size16)
             descLabel.numberOfLines = 15
@@ -64,7 +66,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     
     @IBOutlet var tagsLabel: UILabel! {
         didSet {
-            tagsLabel.text = "#untagged"
+            tagsLabel.text = "#untagged".localized()
             tagsLabel.numberOfLines = 0
             tagsLabel.font = Font.lightFontWithSketchSize(size: Font.size14)
             tagsLabel.textColor = UIColor.lightGray
@@ -74,8 +76,14 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
     // MARK: - ViewController
     
     @IBAction func didTapAddSubtaskButton(_ sender: UIButton) {
+        // TODO: - Add subtask
     }
 
+    @IBAction func didTapDoneButton(_ sender: CheckboxButton) {
+        // TODO: - Set goal as done
+    }
+    
+    
     override func setupNavigationBar() {
         super.setupNavigationBar()
         
@@ -112,7 +120,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput {
         } else {
             navigationItem.title = "New goal".localized()
         }
-        
         
     }
 

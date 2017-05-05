@@ -17,14 +17,20 @@ class CheckboxButton: UIButton {
     var isChecked: Bool = false {
         didSet {
             if true == isChecked {
+                self.tintColor = Color.checkboxGreen()
                 self.setImage(checkedImage, for: .normal)
             } else {
+                self.tintColor = Color.checkboxYellow()
                 self.setImage(emptyImage, for: .normal)
             }
         }
     }
     
     override func awakeFromNib() {
+        isChecked = false
+        tintColor = Color.checkboxYellow()
+        setTitle(nil, for: .normal)
+        contentMode = .scaleAspectFit
         self.addTarget(self, action: #selector(buttonClicked(sender:)), for: .touchUpInside)
     }
     

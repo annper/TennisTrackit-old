@@ -31,4 +31,12 @@ public struct Color {
         return UIColor(0x999900)
     }
     
+    public static func checkboxYellow() -> UIColor {
+        return UIColor(0xF7D842)
+    }
+    
+    public static func checkboxGreen() -> UIColor {
+        return UIColor(0x90EE90)
+    }
+    
 }
