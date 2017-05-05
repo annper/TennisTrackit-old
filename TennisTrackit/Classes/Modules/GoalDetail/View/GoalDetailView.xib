@@ -10,6 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GoalDetailViewController">
             <connections>
+                <outlet property="contentViewWidthConstraint" destination="8wF-tv-0Qo" id="js5-e4-AjZ"/>
+                <outlet property="descLabel" destination="gWt-Ib-rHQ" id="2Ws-sl-nej"/>
+                <outlet property="secondSeparatorView" destination="gbF-nt-DHW" id="eMm-6X-7QY"/>
+                <outlet property="separatorView" destination="tgX-95-z1X" id="5Fb-ij-9xb"/>
+                <outlet property="tagsLabel" destination="vjF-QV-ZbZ" id="dNd-bI-WPB"/>
+                <outlet property="titleLabel" destination="1fW-nm-XU5" id="Vvv-OO-SoU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kgh-GT-vho"/>
             </connections>
         </placeholder>
@@ -18,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXk-Be-9Du">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXk-Be-9Du">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ju-wU-2Mz">
