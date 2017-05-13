@@ -119,17 +119,20 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         }
     }
     
-    private func updateView(textInput: UIView) {
-        switch textInput.tag {
+    private func updateViewWith(tag: Int) {
+        switch tag {
         case 4:
-            let input = textInput as! UITextField
-            titleLabel.text = input.text!
+            if let textField = view.viewWithTag(tag) as? UITextField {
+                titleLabel.text = textField.text
+            }
         case 5:
-            let input = textInput as! UITextView
-            descLabel.text = input.text!
+            if let textView = view.viewWithTag(tag) as? UITextView {
+                descLabel.text = textView.text
+            }
         case 6:
-            let input = textInput as! UITextView
-            tagsLabel.text = input.text!
+            if let textView = view.viewWithTag(tag) as? UITextView {
+                tagsLabel.text = textView.text
+            }
         default: break
         }
         
@@ -161,19 +164,27 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             guard let tappedLabel = sender.view as? UILabel else {
                 return
             }
-            print(tappedLabel.text)
             
             resetEditMode()
             
             switch tappedLabel.tag {
             case 1: // title
+                if let textField = view.viewWithTag(4) as? UITextField {
+                    textField.becomeFirstResponder()
+                }
                 titleLabel.isHidden = true
                 titleTextField.isHidden = false
             case 2: // description
+                if let textView = view.viewWithTag(5) as? UITextView {
+                    textView.becomeFirstResponder()
+                }
                 descLabel.isHidden = true
                 descTextView.isHidden = false
                 displayEditableDescription()
             case 3: // tags
+                if let textView = view.viewWithTag(6) as? UITextView {
+                    textView.becomeFirstResponder()
+                }
                 tagsLabel.isHidden = true
                 tagsTextView.isHidden = false
             default: return
@@ -253,7 +264,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     // MARK: UITextViewDelegate
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        updateView(textInput: textView)
+        updateViewWith(tag: textView.tag)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -269,7 +280,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     // MARK: UITextFieldDelegate
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        updateView(textInput: textField)
+        updateViewWith(tag: textField.tag)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -277,5 +288,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         textField.resignFirstResponder()
         return true
     }
+    
 
 }
