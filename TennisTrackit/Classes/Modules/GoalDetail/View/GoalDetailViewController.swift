@@ -50,7 +50,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             descLabel.text = "Tap to add description".localized()
             descLabel.textColor = UIColor.gray
             descLabel.font = Font.lightFontWithSketchSize(size: Font.size16)
-            descLabel.numberOfLines = 15
+            descLabel.numberOfLines = 0
             descLabel.isUserInteractionEnabled = true
             descLabel.tag = 2
         }
