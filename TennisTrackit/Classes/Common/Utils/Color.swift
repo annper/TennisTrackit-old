@@ -39,4 +39,8 @@ public struct Color {
         return UIColor(0x90EE90)
     }
     
+    public static func textViewBorderColor() -> CGColor {
+        return UIColor(red:0.76, green:0.76, blue:0.76, alpha:1.0).cgColor
+    }
+    
 }

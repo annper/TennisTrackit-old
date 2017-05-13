@@ -105,6 +105,9 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             descTextView.font = Font.lightFontWithSketchSize(size: Font.size16)
             descTextView.delegate = self
             descTextView.tag = 5
+            descTextView.layer.borderWidth = 1
+            descTextView.layer.cornerRadius = 5
+            descTextView.layer.borderColor = Color.textViewBorderColor()
         }
     }
     
@@ -116,6 +119,9 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             tagsTextView.font = Font.lightFontWithSketchSize(size: Font.size14)
             tagsTextView.delegate = self
             tagsTextView.tag = 6
+            tagsTextView.layer.borderWidth = 1
+            tagsTextView.layer.cornerRadius = 5
+            tagsTextView.layer.borderColor = Color.textViewBorderColor()
         }
     }
     
