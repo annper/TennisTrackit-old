@@ -78,7 +78,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     @IBOutlet var titleTextField: UITextField! {
         didSet {
             titleTextField.isHidden = true
-            titleTextField.placeholder = "Add description".localized()
+            titleTextField.placeholder = "Add title".localized()
             titleTextField.textColor = UIColor.gray
             titleTextField.font = Font.mediumFontWithSketchSize(size: Font.size16)
             titleTextField.delegate = self
@@ -168,7 +168,9 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         switch tag {
         case 4:
             if let textField = view.viewWithTag(tag) as? UITextField {
-                titleLabel.text = textField.text
+                if textField.text != "" {
+                    titleLabel.text = textField.text
+                }
             }
         case 6:
             if let textView = view.viewWithTag(tag) as? UITextView {
