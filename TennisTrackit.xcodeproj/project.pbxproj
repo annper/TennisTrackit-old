@@ -83,6 +83,8 @@
 		8431C6A81E7DA70100F47041 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6941E7DA70100F47041 /* MenuViewController.swift */; };
 		8431C6A91E7DA70100F47041 /* MenuWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6961E7DA70100F47041 /* MenuWireframe.swift */; };
 		8431C6AA1E7DA70100F47041 /* MenuWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8431C6961E7DA70100F47041 /* MenuWireframe.swift */; };
+		845928101EC9E6B700C714B6 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459280F1EC9E6B700C714B6 /* RealmStore.swift */; };
+		845928111EC9E6B700C714B6 /* RealmStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8459280F1EC9E6B700C714B6 /* RealmStore.swift */; };
 		84603AD21EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84603AD11EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib */; };
 		84603ADF1EBA90BB00F11091 /* GoalDetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD41EBA90BB00F11091 /* GoalDetailInterfaces.swift */; };
 		84603AE01EBA90BB00F11091 /* GoalDetailInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84603AD41EBA90BB00F11091 /* GoalDetailInterfaces.swift */; };
@@ -232,6 +234,7 @@
 		8431C6931E7DA70100F47041 /* MenuListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuListTableViewCell.xib; sourceTree = "<group>"; };
 		8431C6941E7DA70100F47041 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		8431C6961E7DA70100F47041 /* MenuWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuWireframe.swift; sourceTree = "<group>"; };
+		8459280F1EC9E6B700C714B6 /* RealmStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStore.swift; sourceTree = "<group>"; };
 		84603AD11EBA4C9100F11091 /* GoalsAddNewListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoalsAddNewListTableViewCell.xib; sourceTree = "<group>"; };
 		84603AD41EBA90BB00F11091 /* GoalDetailInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailInterfaces.swift; sourceTree = "<group>"; };
 		84603AD51EBA90BB00F11091 /* GoalDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalDetailModule.swift; sourceTree = "<group>"; };
@@ -488,6 +491,22 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
+		8459280D1EC9E6A400C714B6 /* DataManagers */ = {
+			isa = PBXGroup;
+			children = (
+				8459280E1EC9E6A400C714B6 /* Models */,
+				8459280F1EC9E6B700C714B6 /* RealmStore.swift */,
+			);
+			path = DataManagers;
+			sourceTree = "<group>";
+		};
+		8459280E1EC9E6A400C714B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		84603AD31EBA90BB00F11091 /* GoalDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -709,6 +728,7 @@
 		84B377FB1E69AEE700013603 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8459280D1EC9E6A400C714B6 /* DataManagers */,
 				84B377FF1E69AFAC00013603 /* Extensions */,
 				84B378001E69AFAC00013603 /* Utils */,
 				84B378011E69AFAC00013603 /* Views */,
@@ -1087,6 +1107,7 @@
 				841C0BDC1EB92DB700902D10 /* GoalsListDataItem.swift in Sources */,
 				841461C41E798482007D5002 /* HomeWireframe.swift in Sources */,
 				84B3780B1E69B27500013603 /* NSDate.swift in Sources */,
+				845928101EC9E6B700C714B6 /* RealmStore.swift in Sources */,
 				841461B41E798482007D5002 /* HomeModule.swift in Sources */,
 				8431C6A91E7DA70100F47041 /* MenuWireframe.swift in Sources */,
 				841461B21E798482007D5002 /* HomeInterfaces.swift in Sources */,
@@ -1175,6 +1196,7 @@
 				84B3781C1E69B5AF00013603 /* UITableView.swift in Sources */,
 				8431C6A81E7DA70100F47041 /* MenuViewController.swift in Sources */,
 				841461C51E798482007D5002 /* HomeWireframe.swift in Sources */,
+				845928111EC9E6B700C714B6 /* RealmStore.swift in Sources */,
 				84B3780C1E69B27500013603 /* NSDate.swift in Sources */,
 				841461B51E798482007D5002 /* HomeModule.swift in Sources */,
 				841461B31E798482007D5002 /* HomeInterfaces.swift in Sources */,
