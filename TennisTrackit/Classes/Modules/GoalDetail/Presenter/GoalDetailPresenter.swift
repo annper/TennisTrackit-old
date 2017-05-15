@@ -46,12 +46,13 @@ class GoalDetailPresenter: GoalDetailViewOutput, GoalDetailInteractorOutput {
         userInterface.setupView(goal: goalDisplayItem)
     }
     
-    func viewWillAppear(animated: Bool) {
-
-    }
-    
     func openMenu() {
         wireframe.pushMenu()
+    }
+    
+    func saveGoal() {
+        let updates = userInterface.saveItem()
+        interactor.save(updatedGoal: updates, originalGoal: goalDetailDataItem)
     }
 	
 }

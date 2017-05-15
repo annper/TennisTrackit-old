@@ -9,7 +9,7 @@
 import Foundation
 
 struct GoalDetailDisplayDataItem {
-    var title: String
+    var title: String?
     var description: String?
     var done: Bool
     var tags: String?

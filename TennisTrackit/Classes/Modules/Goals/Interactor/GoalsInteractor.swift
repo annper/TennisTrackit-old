@@ -42,7 +42,7 @@ class GoalsInteractor: GoalsInteractorInput {
         
         let goal = goals[display.id]
         
-        return GoalDetailDataItem(title: goal.title, description: goal.description, done: goal.done, subtasks: goal.subtasks, tags: goal.tags)
+        return GoalDetailDataItem(id: goal.id, title: goal.title, description: goal.description, done: goal.done, subtasks: goal.subtasks, tags: goal.tags)
         
     }
     

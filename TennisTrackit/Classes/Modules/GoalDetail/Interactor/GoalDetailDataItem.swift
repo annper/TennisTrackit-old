@@ -9,6 +9,7 @@
 import Foundation
 
 struct GoalDetailDataItem {
+    var id: Int
     var title: String
     var description: String?
     var done: Bool

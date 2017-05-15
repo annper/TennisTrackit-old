@@ -10,18 +10,20 @@
 
 protocol GoalDetailViewOutput: class {
     func viewDidLoad()
-    func viewWillAppear(animated: Bool)
     func openMenu()
+    func saveGoal()
 }
 
 protocol GoalDetailViewInput: class {
     func setupView(goal: GoalDetailDisplayDataItem?)
+    func saveItem() -> GoalDetailDisplayDataItem
 }
 
 /** interactor **/
 
 protocol GoalDetailInteractorInput: class {
     // GoalDetail interactor inputs
+    func save(updatedGoal: GoalDetailDisplayDataItem, originalGoal: GoalDetailDataItem?)
 }
 
 protocol GoalDetailInteractorOutput: class {

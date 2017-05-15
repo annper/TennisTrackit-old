@@ -151,11 +151,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         eventHandler.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        eventHandler.viewWillAppear(animated: animated)
-    }
-    
     private func resize(textView: UITextView) {
         
         if let text = textView.text, text.length > 0 {
@@ -215,17 +210,25 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             
             if nil != goal.description {
                 descTextView.text = goal.description!
+                resize(textView: descTextView)
             }
             
             if nil != goal.tags {
                 tagsTextView.text = goal.tags!
+                resize(textView: tagsTextView)
             }
         } else {
             navigationItem.title = "New goal".localized()
         }
-        
-        resize(textView: descTextView)
-        resize(textView: tagsTextView)
+    
+    }
+    
+    func saveItem() -> GoalDetailDisplayDataItem {
+        let title = titleTextField.text
+        let description = descTextView.text
+        let tags = tagsTextView.text
+        let done = doneButton.isChecked
+        return GoalDetailDisplayDataItem(title: title, description: description, done: done, tags: tags)
     }
     
     // MARK: UITextViewDelegate
@@ -240,7 +243,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         if textView.tag == 6 && textView.text == "" {
             textView.text = "#untagged".localized()
         }
-        
         resize(textView: textView)
     }
     
@@ -250,7 +252,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             textView.resignFirstResponder()
             return false
         }
-
         resize(textView: textView)
         return true
     }
@@ -280,6 +281,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         updateTextFieldWith(tag: textField.tag)
+        eventHandler.saveGoal()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -287,6 +289,5 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         textField.resignFirstResponder()
         return true
     }
-    
 
 }
