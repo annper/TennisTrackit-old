@@ -45,19 +45,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         }
     }
     
-    @IBOutlet var descLabelHeightConstraint: NSLayoutConstraint!
-    
-    @IBOutlet var descLabel: UILabel! {
-        didSet {
-            descLabel.text = "Tap to add description".localized()
-            descLabel.textColor = UIColor.gray
-            descLabel.font = Font.lightFontWithSketchSize(size: Font.size16)
-            descLabel.numberOfLines = 0
-            descLabel.isUserInteractionEnabled = true
-            descLabel.tag = 2
-        }
-    }
-    
     @IBOutlet var separatorView: UIView! {
         didSet {
             separatorView.backgroundColor = Color.homeDarkOlive()
@@ -101,15 +88,13 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     
     @IBOutlet var descTextView: UITextView! {
         didSet {
-            descTextView.isHidden = true
             descTextView.text = ""
             descTextView.textColor = UIColor.gray
             descTextView.font = Font.lightFontWithSketchSize(size: Font.size16)
             descTextView.delegate = self
             descTextView.tag = 5
-            descTextView.layer.borderWidth = 1
-            descTextView.layer.cornerRadius = 5
-            descTextView.layer.borderColor = Color.textViewBorderColor()
+            descTextView.isScrollEnabled = false
+            descTextView.text = "Tap to add description".localized()
         }
     }
     
@@ -121,39 +106,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             tagsTextView.font = Font.lightFontWithSketchSize(size: Font.size14)
             tagsTextView.delegate = self
             tagsTextView.tag = 6
-            tagsTextView.layer.borderWidth = 1
-            tagsTextView.layer.cornerRadius = 5
-            tagsTextView.layer.borderColor = Color.textViewBorderColor()
         }
-    }
-    
-    private func updateViewWith(tag: Int) {
-        switch tag {
-        case 4:
-            if let textField = view.viewWithTag(tag) as? UITextField {
-                titleLabel.text = textField.text
-            }
-        case 5:
-            if let textView = view.viewWithTag(tag) as? UITextView {
-                descLabel.text = textView.text
-            }
-        case 6:
-            if let textView = view.viewWithTag(tag) as? UITextView {
-                tagsLabel.text = textView.text
-            }
-        default: break
-        }
-        
-    }
-    
-    private func resetEditMode() {
-        titleLabel.isHidden = false
-        descLabel.isHidden = false
-        tagsLabel.isHidden = false
-        
-        titleTextField.isHidden = true
-        descTextView.isHidden = true
-        tagsTextView.isHidden = true
     }
     
     // MARK: - ViewController
@@ -173,7 +126,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
                 return
             }
             
-            resetEditMode()
+            exitEditMode()
             
             switch tappedLabel.tag {
             case 1: // title
@@ -182,14 +135,9 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
                 }
                 titleLabel.isHidden = true
                 titleTextField.isHidden = false
-            case 2: // description
-                if let textView = view.viewWithTag(5) as? UITextView {
-                    textView.becomeFirstResponder()
-                }
-                descLabel.isHidden = true
-                descTextView.isHidden = false
             case 3: // tags
                 if let textView = view.viewWithTag(6) as? UITextView {
+                    toggleEditMoreFor(textView: textView, enterEditMore: true)
                     textView.becomeFirstResponder()
                 }
                 tagsLabel.isHidden = true
@@ -197,7 +145,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             default: return
             }
             
-//            displayEditableDescription(text: descTextView.text)
         }
         
     }
@@ -213,11 +160,48 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         let titleGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(sender:)))
         titleLabel.addGestureRecognizer(titleGestureRecogniser)
         
-        let descGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(sender:)))
-        descLabel.addGestureRecognizer(descGestureRecogniser)
-        
         let tagsGestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(didTapLabel(sender:)))
         tagsLabel.addGestureRecognizer(tagsGestureRecogniser)
+    }
+    
+    private func updateViewWith(tag: Int) {
+        switch tag {
+        case 4:
+            if let textField = view.viewWithTag(tag) as? UITextField {
+                titleLabel.text = textField.text
+            }
+        case 6:
+            if let textView = view.viewWithTag(tag) as? UITextView {
+                tagsLabel.text = textView.text
+            }
+        default: break
+        }
+        
+    }
+    
+    private func exitEditMode() {
+        titleLabel.isHidden = false
+        tagsLabel.isHidden = false
+        
+        titleTextField.isHidden = true
+        tagsTextView.isHidden = true
+        
+        toggleEditMoreFor(textView: descTextView, enterEditMore: false)
+        toggleEditMoreFor(textView: tagsTextView, enterEditMore: false)
+    }
+    
+    private func toggleEditMoreFor(textView: UITextView, enterEditMore: Bool) {
+        if true == enterEditMore {
+            textView.layer.cornerRadius = 5
+            textView.layer.borderWidth = 1
+            textView.layer.borderColor = Color.textViewBorderColor()
+        } else {
+            textView.layer.cornerRadius = 0
+            textView.layer.borderWidth = 0
+            textView.layer.borderColor = UIColor.clear.cgColor
+        }
+        
+        view.layoutIfNeeded()
     }
     
     // MARK: - UIViewController
@@ -236,28 +220,14 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         eventHandler.openMenu()
     }
     
-    private func displayEditableDescription(text: String?) {
-        // TODO: - Resize description view
+    private func resizeTextView(text: String?) {
         
         if let text = text, text.length > 0 {
-            let newHeight = heightForView(text: text, font: descLabel.font, width: descLabel.frame.width)
-            descLabelHeightConstraint.constant = newHeight
+            let newHeight = descTextView.sizeThatFits(CGSize(width: descTextView.frame.size.width, height: CGFloat.greatestFiniteMagnitude)).height
             descTextViewHeightConstraint.constant = newHeight
         }
         
         view.layoutIfNeeded()
-        
-    }
-    
-    private func heightForView(text: String, font: UIFont, width: CGFloat) -> CGFloat {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
-        label.text = text
-        label.font = font
-        label.numberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        
-        label.sizeToFit()
-        return label.frame.width
     }
     
     // MARK: - GoalDetailViewInput
@@ -273,7 +243,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             doneButton.isChecked = goal.done
             
             if nil != goal.description {
-                descLabel.text = goal.description!
                 descTextView.text = goal.description!
             }
             
@@ -285,34 +254,53 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             navigationItem.title = "New goal".localized()
         }
         
-        
-        // TODO: - Calculate height of desc label. desc text view will always be equal or smaller in size
+        resizeTextView(text: descTextView.text)
     }
     
     // MARK: UITextViewDelegate
     
     func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text == "" {
+            textView.text = "Tap to add description".localized()
+        }
         updateViewWith(tag: textView.tag)
-        displayEditableDescription(text: descTextView.text)
+        resizeTextView(text: descTextView.text)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
-            resetEditMode()
+            exitEditMode()
             textView.resignFirstResponder()
             return false
         }
+        resizeTextView(text: descTextView.text)
         return true
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        exitEditMode()
+        textView.becomeFirstResponder()
+        
+        // Manage placeholder text
+        if textView.text == "Tap to add description".localized() {
+            textView.text = ""
+        }
+        
+        toggleEditMoreFor(textView: textView, enterEditMore: true)
+    }
+    
     // MARK: UITextFieldDelegate
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        exitEditMode()
+        textField.becomeFirstResponder()
+    }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         updateViewWith(tag: textField.tag)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        resetEditMode()
+        exitEditMode()
         textField.resignFirstResponder()
         return true
     }
