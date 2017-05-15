@@ -13,6 +13,7 @@
                 <outlet property="addSubtaskButton" destination="aHr-C6-mRn" id="J2W-sE-aRh"/>
                 <outlet property="contentViewWidthConstraint" destination="8wF-tv-0Qo" id="js5-e4-AjZ"/>
                 <outlet property="descLabel" destination="gWt-Ib-rHQ" id="2Ws-sl-nej"/>
+                <outlet property="descLabelHeightConstraint" destination="hES-L8-R5G" id="ZKT-fH-Iwc"/>
                 <outlet property="descTextView" destination="cBH-9L-asC" id="E6T-YZ-mDU"/>
                 <outlet property="descTextViewHeightConstraint" destination="cR8-60-D9M" id="z7U-ln-SZg"/>
                 <outlet property="doneButton" destination="3rl-aT-sia" id="bdf-IL-DY8"/>

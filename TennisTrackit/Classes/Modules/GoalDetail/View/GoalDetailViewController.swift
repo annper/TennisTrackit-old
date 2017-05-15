@@ -45,6 +45,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         }
     }
     
+    @IBOutlet var descLabelHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet var descLabel: UILabel! {
         didSet {
             descLabel.text = "Tap to add description".localized()
@@ -186,7 +188,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
                 }
                 descLabel.isHidden = true
                 descTextView.isHidden = false
-                displayEditableDescription()
             case 3: // tags
                 if let textView = view.viewWithTag(6) as? UITextView {
                     textView.becomeFirstResponder()
@@ -196,6 +197,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             default: return
             }
             
+//            displayEditableDescription(text: descTextView.text)
         }
         
     }
@@ -234,8 +236,28 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         eventHandler.openMenu()
     }
     
-    private func displayEditableDescription() {
+    private func displayEditableDescription(text: String?) {
         // TODO: - Resize description view
+        
+        if let text = text, text.length > 0 {
+            let newHeight = heightForView(text: text, font: descLabel.font, width: descLabel.frame.width)
+            descLabelHeightConstraint.constant = newHeight
+            descTextViewHeightConstraint.constant = newHeight
+        }
+        
+        view.layoutIfNeeded()
+        
+    }
+    
+    private func heightForView(text: String, font: UIFont, width: CGFloat) -> CGFloat {
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.text = text
+        label.font = font
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        
+        label.sizeToFit()
+        return label.frame.width
     }
     
     // MARK: - GoalDetailViewInput
@@ -271,6 +293,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     
     func textViewDidEndEditing(_ textView: UITextView) {
         updateViewWith(tag: textView.tag)
+        displayEditableDescription(text: descTextView.text)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -279,7 +302,6 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             textView.resignFirstResponder()
             return false
         }
-        
         return true
     }
     
