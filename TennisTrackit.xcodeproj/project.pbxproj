@@ -1367,7 +1367,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 828CECB763F9D9A0CE20356F /* Pods-TennisTrackit [Development].debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TennisTrackit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1381,7 +1380,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7F87AAEE2EB7D8E056847C19 /* Pods-TennisTrackit [Development].release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TennisTrackit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1423,7 +1421,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA0ECAAEDB675552BA4D9E79 /* Pods-TennisTrackit [Enterprise].debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TennisTrackit copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1437,7 +1434,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDEA6CFA2AC16DF58C81A3ED /* Pods-TennisTrackit [Enterprise].release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "TennisTrackit copy-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
