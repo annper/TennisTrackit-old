@@ -9,6 +9,10 @@ import Foundation
 
 public extension Date {
     
+    var timestamp: String {
+        return Formatter.timestamp.string(from: self)
+    }
+    
     func isToday() -> Bool {
         let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
         return calendar!.isDateInToday(self)
@@ -39,4 +43,15 @@ public extension Date {
         return month == currentMonth
     }
         
+}
+
+public extension Formatter {
+    
+    static var timestamp: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.timeZone = TimeZone(identifier: TimeZone.current.identifier)
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        return formatter
+    }
 }

@@ -10,11 +10,11 @@ import UIKit
 
 class GoalsListDisplayItem: SectionItem {
     
-    var id: Int
+    var id: String
     var title: String
     var description: String?
     
-    init(id: Int, title: String, description: String?) {
+    init(id: String, title: String, description: String?) {
         self.id = id
         self.title = title
         self.description = description

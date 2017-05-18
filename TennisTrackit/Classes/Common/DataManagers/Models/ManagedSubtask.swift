@@ -9,6 +9,8 @@
 import Foundation
 
 public class ManagedSubtask: ManagedBaseModel {
+    
+    public dynamic var id: Int = 0
     public dynamic var title: String = ""
     public dynamic var done: Bool = false
     
@@ -18,6 +20,7 @@ public class ManagedSubtask: ManagedBaseModel {
         
         let managedSubtask = ManagedSubtask()
         
+        managedSubtask.id = subtask.id
         managedSubtask.title = subtask.title
         managedSubtask.done = subtask.done
         

@@ -15,7 +15,7 @@ public class RealmStore {
     
     private var databaseFilename: String!
     
-    static let sharedStore = RealmStore(databaseFilename: "db.realm")
+    static let sharedStore = RealmStore(databaseFilename: "db.realm.tennis")
     
     // MARK: - RealmStore
     

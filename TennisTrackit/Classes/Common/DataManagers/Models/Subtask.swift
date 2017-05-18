@@ -10,6 +10,7 @@ import Foundation
 
 public class Subtask {
     
+    public var id: Int = 0
     public var title: String = ""
     public var done: Bool = false
     
@@ -17,6 +18,7 @@ public class Subtask {
         
         let subtask = Subtask()
         
+        subtask.id = managedSubtask.id
         subtask.title = managedSubtask.title
         subtask.done = managedSubtask.done
         

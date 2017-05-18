@@ -10,12 +10,12 @@ import UIKit
 
 struct GoalsListDataItem {
 	
-    var id: Int
+    var id: String
     var title: String
     var description: String?
     var done: Bool
     
-    init(id: Int, title: String, description: String?, done: Bool) {
+    init(id: String, title: String, description: String?, done: Bool) {
         self.id = id
         self.title = title
         self.description = description

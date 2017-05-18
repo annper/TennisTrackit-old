@@ -23,7 +23,7 @@ protocol GoalDetailViewInput: class {
 
 protocol GoalDetailInteractorInput: class {
     // GoalDetail interactor inputs
-    func save(updatedGoal: GoalDetailDisplayDataItem, originalGoal: GoalDetailDataItem?)
+    func save(updatedGoal: GoalDetailDisplayDataItem, originalGoal: Goal?) -> Goal?
 }
 
 protocol GoalDetailInteractorOutput: class {

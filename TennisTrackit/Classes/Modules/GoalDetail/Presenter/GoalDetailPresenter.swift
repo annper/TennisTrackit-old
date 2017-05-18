@@ -14,7 +14,7 @@ class GoalDetailPresenter: GoalDetailViewOutput, GoalDetailInteractorOutput {
     var interactor: GoalDetailInteractorInput
     weak var userInterface: GoalDetailViewInput!
     
-    var goalDetailDataItem: GoalDetailDataItem!
+    var goal: Goal?
 	
     // MARK: - GoalDetailPresenter
     
@@ -24,25 +24,19 @@ class GoalDetailPresenter: GoalDetailViewOutput, GoalDetailInteractorOutput {
         self.userInterface = userInterface
     }
     
-    private func goalDisplayItemWith(goalDetailItem: GoalDetailDataItem?) -> GoalDetailDisplayDataItem? {
+    private func goalDisplayItemWith(goal: Goal?) -> GoalDetailDisplayDataItem? {
         
-        guard let goal = goalDetailItem else {
+        guard let goal = goal else {
             return nil
         }
         
-        var tagsString: String?
-        
-        if let tags = goal.tags, tags.count > 0 {
-            tagsString = "#" + tags.joined(separator: " #")
-        }
-        
-        return GoalDetailDisplayDataItem(title: goal.title, description: goal.description, done: goal.done, tags: tagsString)
+        return GoalDetailDisplayDataItem(title: goal.title, description: goal.desc, done: goal.done, tags: goal.tags)
     }
     
     // MARK: - GoalDetailViewOutput
 
     func viewDidLoad() {
-        let goalDisplayItem = goalDisplayItemWith(goalDetailItem: goalDetailDataItem)
+        let goalDisplayItem = goalDisplayItemWith(goal: goal)
         userInterface.setupView(goal: goalDisplayItem)
     }
     
@@ -52,7 +46,7 @@ class GoalDetailPresenter: GoalDetailViewOutput, GoalDetailInteractorOutput {
     
     func saveGoal() {
         let updates = userInterface.saveItem()
-        interactor.save(updatedGoal: updates, originalGoal: goalDetailDataItem)
+        goal = interactor.save(updatedGoal: updates, originalGoal: goal)
     }
 	
 }

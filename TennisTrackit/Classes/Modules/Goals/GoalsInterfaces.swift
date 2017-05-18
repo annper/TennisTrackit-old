@@ -22,7 +22,7 @@ protocol GoalsViewInput: class, SectionItemViewInput {
 
 protocol GoalsInteractorInput: class {
     func dataItems() -> [GoalsListDataItem]
-    func goalItemWith(display: GoalsListDisplayItem) -> GoalDetailDataItem?
+    func goalWith(id: String) -> Goal?
 }
 
 protocol GoalsInteractorOutput: class {

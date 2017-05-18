@@ -11,45 +11,34 @@ import Foundation
 class GoalDetailInteractor: GoalDetailInteractorInput {
     
     weak var presenter: GoalDetailInteractorOutput!
+    var goalDataManager: GoalDataManager!
     
     // MARK: - GoalDetailInteractorInput
     
-    func save(updatedGoal: GoalDetailDisplayDataItem, originalGoal: GoalDetailDataItem?) {
+    func save(updatedGoal: GoalDetailDisplayDataItem, originalGoal: Goal?) -> Goal? {
         
-        // Get the full list of goals
-        var goals = [GoalDetailDataItem]()
-        
-        if let savedGoals = Constants.sharedInstance.UserGoals as? [GoalDetailDataItem] {
-            goals = savedGoals
+        // A goal must have a title to save/update
+        guard (updatedGoal.title?.length)! > 0 else {
+            return nil
         }
         
-        var savedTags: [String]?
+        let savedGoal = Goal()
+        let id: String = nil != originalGoal ? originalGoal!.id : Date().timestamp
         
-        // Every goal must have a title
-        guard let title = updatedGoal.title else {
-            return
+        // TODO: - Also save subtasks
+        
+        savedGoal.id = id
+        savedGoal.title = updatedGoal.title!
+        savedGoal.desc = updatedGoal.description
+        savedGoal.subtasks = nil
+        savedGoal.tags = updatedGoal.tags
+        savedGoal.done = updatedGoal.done
+        
+        if nil != originalGoal {
+            goalDataManager.deleteGoalWith(id: id)
         }
-        
-        if title.length <= 0 {
-            return
-        }
-        
-        if let tags = updatedGoal.tags {
-            savedTags = tags.replacingOccurrences(of: "#", with: "").components(separatedBy: ",")
-        }
-        
-        // Save it
-        let id = nil == originalGoal ? goals.count : originalGoal!.id
-        let goalToSave = GoalDetailDataItem(id: id, title: title, description: updatedGoal.description, done: updatedGoal.done, subtasks: nil, tags: savedTags)
-        
-        if nil == originalGoal {
-            goals.append(goalToSave)
-        } else {
-            goals[id] = goalToSave
-        }
-        
-        let defaults = UserDefaults.standard
-        
-//        return goals
+        goalDataManager.persistOrUpdateGoals(goals: [savedGoal] )
+
+        return savedGoal
     }
 }

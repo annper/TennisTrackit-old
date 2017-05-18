@@ -33,13 +33,13 @@ class GoalsPresenter: SectionItemPresenter<GoalsListDisplayItem>, GoalsViewOutpu
     }
     
     func openGoalDetailWith(displayItem: GoalsListDisplayItem?) {
-        var detailItem: GoalDetailDataItem? = nil
+        var goal: Goal?
         
         if let item = displayItem {
-            detailItem = interactor.goalItemWith(display: item)
+            goal = interactor.goalWith(id: item.id)
         }
         
-        wireframe.pushNewGoalWith(item: detailItem)
+        wireframe.pushNewGoalWith(goal: goal)
     }
     
     // MARK: - SectionItemPresenter

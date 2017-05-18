@@ -10,10 +10,10 @@ import UIKit
 
 struct GoalDetailModule {
 	
-    static func buildWith(item: GoalDetailDataItem?) -> UIViewController {
+    static func buildWith(goal: Goal?) -> UIViewController {
         let module = buildModule()
 
-        module.presenter.goalDetailDataItem = item
+        module.presenter.goal = goal
         
         return module.viewController
 	}
@@ -32,6 +32,7 @@ struct GoalDetailModule {
         presenter.wireframe = wireframe
         
         interactor.presenter = presenter
+        interactor.goalDataManager = GoalDataManager()
         
         viewController.eventHandler = presenter
 		

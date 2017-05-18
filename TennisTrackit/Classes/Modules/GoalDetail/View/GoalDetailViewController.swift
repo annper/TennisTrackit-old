@@ -228,6 +228,7 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         let description = descTextView.text
         let tags = tagsTextView.text
         let done = doneButton.isChecked
+
         return GoalDetailDisplayDataItem(title: title, description: description, done: done, tags: tags)
     }
     

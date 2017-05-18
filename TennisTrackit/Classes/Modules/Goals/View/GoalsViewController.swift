@@ -57,6 +57,7 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     }
     
     @objc private func didTapAddNewButton() {
+        
         eventHandler.openGoalDetailWith(displayItem: nil)
     }
         

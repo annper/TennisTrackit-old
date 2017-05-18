@@ -19,8 +19,8 @@ class GoalsWireframe: Wireframe {
         pushViewInNavigationController(viewController: menuViewController, animated: true)
     }
     
-    func pushNewGoalWith(item: GoalDetailDataItem?) {
-        let goalDetailViewController = GoalDetailModule.buildWith(item: item)
+    func pushNewGoalWith(goal: Goal?) {
+        let goalDetailViewController = GoalDetailModule.buildWith(goal: goal)
         pushViewInNavigationController(viewController: goalDetailViewController, animated: true)
     }
 

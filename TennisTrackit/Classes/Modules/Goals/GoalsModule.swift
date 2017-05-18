@@ -31,6 +31,7 @@ struct GoalsModule {
         presenter.wireframe = wireframe
         
         interactor.presenter = presenter
+        interactor.goalDataManager = GoalDataManager()
         
         viewController.eventHandler = presenter
         
