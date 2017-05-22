@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,30 +18,44 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4d-vb-HCj">
-                        <rect key="frame" x="8" y="8" width="42" height="21"/>
+                        <rect key="frame" x="68" y="8" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxa-Rz-qWk">
-                        <rect key="frame" x="8" y="37" width="42" height="21"/>
+                        <rect key="frame" x="68" y="37" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrR-hl-7fM">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="79"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="ccU-5G-ktl"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="g4d-vb-HCj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="1uU-da-S51"/>
-                    <constraint firstItem="Lxa-Rz-qWk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8ia-LB-Is9"/>
-                    <constraint firstItem="Lxa-Rz-qWk" firstAttribute="top" secondItem="g4d-vb-HCj" secondAttribute="bottom" constant="8" id="pEb-Rc-tOE"/>
-                    <constraint firstItem="g4d-vb-HCj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="pKy-JU-cmZ"/>
+                    <constraint firstItem="rrR-hl-7fM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1G7-h1-wmd"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g4d-vb-HCj" secondAttribute="trailing" constant="8" id="1t2-5O-mnD"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lxa-Rz-qWk" secondAttribute="trailing" constant="8" id="XUu-7X-AnD"/>
+                    <constraint firstItem="g4d-vb-HCj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="YiS-Z2-rz2"/>
+                    <constraint firstItem="Lxa-Rz-qWk" firstAttribute="leading" secondItem="rrR-hl-7fM" secondAttribute="trailing" constant="8" id="fu4-Hk-yOS"/>
+                    <constraint firstItem="g4d-vb-HCj" firstAttribute="leading" secondItem="rrR-hl-7fM" secondAttribute="trailing" constant="8" id="jMI-eR-c26"/>
+                    <constraint firstAttribute="bottom" secondItem="rrR-hl-7fM" secondAttribute="bottom" id="krf-ea-Aim"/>
+                    <constraint firstItem="Lxa-Rz-qWk" firstAttribute="top" secondItem="g4d-vb-HCj" secondAttribute="bottom" constant="8" id="nCw-aD-41h"/>
+                    <constraint firstItem="rrR-hl-7fM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qeO-yN-B2y"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="descriptionLabel" destination="Lxa-Rz-qWk" id="N8o-qq-upH"/>
-                <outlet property="titleLabel" destination="g4d-vb-HCj" id="hcz-sm-CjR"/>
+                <outlet property="deleteButton" destination="rrR-hl-7fM" id="1BZ-tg-7qE"/>
+                <outlet property="deleteButtonWidthConstraint" destination="ccU-5G-ktl" id="Op6-7p-uDH"/>
+                <outlet property="descriptionLabel" destination="Lxa-Rz-qWk" id="dEz-7B-4FA"/>
+                <outlet property="titleLabel" destination="g4d-vb-HCj" id="TvZ-cs-GjD"/>
             </connections>
-            <point key="canvasLocation" x="796" y="447.5"/>
+            <point key="canvasLocation" x="796" y="447"/>
         </tableViewCell>
     </objects>
 </document>

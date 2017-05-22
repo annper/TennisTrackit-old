@@ -45,4 +45,10 @@ class GoalsInteractor: GoalsInteractorInput {
         
     }
     
+    func deleteGoalAt(index: Int) {
+        var dataItems = self.dataItems()
+        let goalId = dataItems[index].id
+        goalDataManager.deleteGoalWith(id: goalId)
+    }
+    
 }

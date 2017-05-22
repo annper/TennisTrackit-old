@@ -53,4 +53,8 @@ class TableViewDelegate<T: SectionItem>: NSObject, UITableViewDelegate {
         
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
+    }
 }

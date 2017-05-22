@@ -22,6 +22,12 @@ class GoalsPresenter: SectionItemPresenter<GoalsListDisplayItem>, GoalsViewOutpu
         self.userInterface = userInterface
     }
     
+    private func deleteGoalAt(index: Int) {
+        interactor.deleteGoalAt(index: index)
+        
+        updateSectionItemUserInterface(userInterface: userInterface, reloadData: false)
+    }
+    
     // MARK: - GoalsViewOutput
     
     func viewWillAppear(animated: Bool) {
@@ -40,6 +46,11 @@ class GoalsPresenter: SectionItemPresenter<GoalsListDisplayItem>, GoalsViewOutpu
         }
         
         wireframe.pushNewGoalWith(goal: goal)
+    }
+    
+    func deleteRowAt(indexPath: IndexPath) {
+        deleteGoalAt(index: indexPath.row)
+        userInterface.delteTableRow()
     }
     
     // MARK: - SectionItemPresenter

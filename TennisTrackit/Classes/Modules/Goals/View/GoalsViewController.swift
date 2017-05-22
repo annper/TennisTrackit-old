@@ -12,6 +12,7 @@ import Cartography
 class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewInput {
     
     var eventHandler: GoalsViewOutput!
+    private var currentEditIndexPath: IndexPath?
     
     override var lazyTableViewDataSource:TableViewDataSource<GoalsListDisplayItem> {
         let reuseIdentifier = GoalsListTableViewCell.reuseIdentifier()
@@ -39,6 +40,7 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
             strongSelf.eventHandler.openGoalDetailWith(displayItem: object)
         }
         
+        
         return temp
     }
     
@@ -57,7 +59,6 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
     }
     
     @objc private func didTapAddNewButton() {
-        
         eventHandler.openGoalDetailWith(displayItem: nil)
     }
         
@@ -69,11 +70,51 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         tableView.register(GoalsListTableViewCell.nib(), forCellReuseIdentifier: GoalsListTableViewCell.reuseIdentifier())
         tableView.register(GoalsAddNewListTableViewCell.nib(), forCellReuseIdentifier: GoalsAddNewListTableViewCell.reuseIdentifier())
         
+        
+        setupLongTapGestureRecognizer()
+    }
+    
+    func setupLongTapGestureRecognizer() {
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(enterEditMode(sender:)))
+        gestureRecognizer.minimumPressDuration = 1.5
+        view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    @objc private func enterEditMode(sender: UILongPressGestureRecognizer) {
+        
+        if sender.state == .began {
+            
+            let touchPoint = sender.location(in: self.view)
+            
+            guard let indexPath = tableView.indexPathForRow(at: touchPoint) else {
+                return
+            }
+            
+            guard let cell = tableView.cellForRow(at: indexPath) as? GoalsListTableViewCell else {
+                return
+            }
+            
+            if indexPath != currentEditIndexPath {
+                
+                // Stop editing any cell that was seected before this one
+                if nil != currentEditIndexPath {
+                    let oldCell = tableView.cellForRow(at: currentEditIndexPath!) as! GoalsListTableViewCell
+                    oldCell.hideDeleteButton()
+                }
+                
+                cell.showDeleteButton()
+                currentEditIndexPath = indexPath
+                cell.deleteButton.addTarget(self, action: #selector(didTapDeleteOnCell(button:)), for: .touchUpInside)
+            } else {
+                cell.hideDeleteButton()
+                currentEditIndexPath = nil
+            }
+            
+        }
     }
     
     override func setupNavigationBar() {
         super.setupNavigationBar()
-        
         navigationItem.title = NSLocalizedString("Goals", comment: "")
         setUpNavigationBarImageLeft()
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "hamburger.png"), style: .plain, target: self, action: #selector(self.didTapMenuBarButton(button:)))
@@ -94,7 +135,16 @@ class GoalsViewController: TableViewController<GoalsListDisplayItem>, GoalsViewI
         eventHandler.openMenu()
     }
     
+    @objc private func didTapDeleteOnCell(button: UIButton) {
+        eventHandler.deleteRowAt(indexPath: currentEditIndexPath!)
+    }
+    
     // MARK: - GoalsViewInput
+    
+    func delteTableRow() {
+        tableView.deleteRows(at: [currentEditIndexPath!], with: .fade)
+        currentEditIndexPath = nil
+    }
 
 }
 
@@ -109,7 +159,6 @@ class GoalsTableViewDelegate: TableViewDelegate<GoalsListDisplayItem> {
 }
 
 class GoalsListTableViewDataSource: TableViewDataSource <GoalsListDisplayItem> {
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = indexPath.row == 0 ? GoalsAddNewListTableViewCell.reuseIdentifier() : GoalsListTableViewCell.reuseIdentifier()
@@ -127,5 +176,6 @@ class GoalsListTableViewDataSource: TableViewDataSource <GoalsListDisplayItem> {
         
         return cell
     }
+
 }
 
