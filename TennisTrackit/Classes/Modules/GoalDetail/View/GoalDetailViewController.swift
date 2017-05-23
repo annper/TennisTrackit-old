@@ -15,6 +15,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     var eventHandler: GoalDetailViewOutput!
     
     private let screenWidth = UIScreen.main.bounds.width
+    private let descriptionPlaceholderText = "Tap to add description".localized()
+    private let tagsPlaceholderText = "#untagged".localized()
     
     // MARK: - IBOUtlets
     
@@ -83,7 +85,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             descTextView.delegate = self
             descTextView.tag = 5
             descTextView.isScrollEnabled = false
-            descTextView.text = "Tap to add description".localized()
+            descTextView.text = descriptionPlaceholderText
+        
         }
     }
     
@@ -97,7 +100,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
             tagsTextView.delegate = self
             tagsTextView.tag = 6
             tagsTextView.isScrollEnabled = false
-            tagsTextView.text = "#untagged".localized()
+            tagsTextView.text = tagsPlaceholderText
+            tagsTextView.returnKeyType = .done
         }
     }
     
@@ -154,12 +158,13 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     private func resize(textView: UITextView) {
         
         if let text = textView.text, text.length > 0 {
+            
             let newHeight = textView.sizeThatFits(CGSize(width: textView.frame.size.width, height: CGFloat.greatestFiniteMagnitude)).height
             
             if true == textView.constraints.contains(descTextViewHeightConstraint) {
-                descTextViewHeightConstraint.constant = newHeight
+                descTextViewHeightConstraint.constant = newHeight > descTextViewHeightConstraint.constant ? newHeight : descTextViewHeightConstraint.constant
             } else {
-                tagsTextViewHeightConstraint.constant = newHeight
+                tagsTextViewHeightConstraint.constant = newHeight >                 tagsTextViewHeightConstraint.constant ? newHeight : tagsTextViewHeightConstraint.constant
             }
         }
         
@@ -225,8 +230,8 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
     
     func saveItem() -> GoalDetailDisplayDataItem {
         let title = titleTextField.text
-        let description = descTextView.text
-        let tags = tagsTextView.text
+        let description = descTextView.text == descriptionPlaceholderText ? nil : descTextView.text
+        let tags = tagsTextView.text == tagsPlaceholderText ? nil : tagsTextView.text
         let done = doneButton.isChecked
 
         return GoalDetailDisplayDataItem(title: title, description: description, done: done, tags: tags)
@@ -238,16 +243,21 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         
         // Manage placeholder text
         if textView.tag == 5 && textView.text == "" {
-            textView.text = "Tap to add description".localized()
+            textView.text = descriptionPlaceholderText
         }
         
         if textView.tag == 6 && textView.text == "" {
-            textView.text = "#untagged".localized()
+            textView.text = tagsPlaceholderText
         }
         resize(textView: textView)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        if (textView.tag != 6) || (textView.tag == 6 && text == ",") {
+            eventHandler.saveGoal()
+        }
+
         if text == "\n" {
             exitEditMode()
             textView.resignFirstResponder()
@@ -261,11 +271,11 @@ class GoalDetailViewController: ViewController, GoalDetailViewInput, UITextField
         exitEditMode()
         
         // Manage placeholder text
-        if  textView.tag == 5 && textView.text == "Tap to add description".localized() {
+        if  textView.tag == 5 && textView.text == descriptionPlaceholderText {
             textView.text = ""
         }
         
-        if textView.tag == 6 && textView.text == "#untagged".localized() {
+        if textView.tag == 6 && textView.text == tagsPlaceholderText {
             textView.text = ""
         }
         
